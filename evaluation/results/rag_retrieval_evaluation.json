@@ -1,0 +1,998 @@
+{
+  "dataset": "evaluation/golden_dataset_rag.jsonl",
+  "query_count": 50,
+  "top_k": 5,
+  "metric_definitions": {
+    "hit_rate": "Proporción de preguntas cuyo chunk relevante aparece en los primeros k resultados.",
+    "mrr": "Promedio del inverso del rango del primer chunk relevante en los primeros k resultados."
+  },
+  "grid_search": [
+    {
+      "dense_weight": 0.0,
+      "bm25_weight": 1.0,
+      "hit_rate": 0.8,
+      "mrr": 0.6766666666666665
+    },
+    {
+      "dense_weight": 0.2,
+      "bm25_weight": 0.8,
+      "hit_rate": 0.86,
+      "mrr": 0.6986666666666668
+    },
+    {
+      "dense_weight": 0.4,
+      "bm25_weight": 0.6,
+      "hit_rate": 0.88,
+      "mrr": 0.7113333333333333
+    },
+    {
+      "dense_weight": 0.5,
+      "bm25_weight": 0.5,
+      "hit_rate": 0.92,
+      "mrr": 0.722
+    },
+    {
+      "dense_weight": 0.6,
+      "bm25_weight": 0.4,
+      "hit_rate": 0.92,
+      "mrr": 0.7066666666666667
+    },
+    {
+      "dense_weight": 0.8,
+      "bm25_weight": 0.19999999999999996,
+      "hit_rate": 0.92,
+      "mrr": 0.6513333333333332
+    },
+    {
+      "dense_weight": 1.0,
+      "bm25_weight": 0.0,
+      "hit_rate": 0.72,
+      "mrr": 0.4883333333333333
+    }
+  ],
+  "best_weight_full_dataset": {
+    "dense_weight": 0.5,
+    "bm25_weight": 0.5,
+    "hit_rate": 0.92,
+    "mrr": 0.722
+  },
+  "cross_validation": {
+    "per_weight": [
+      {
+        "dense_weight": 0.0,
+        "bm25_weight": 1.0,
+        "mean_hit_rate": 0.8,
+        "std_hit_rate": 0.1264911064067352,
+        "mean_mrr": 0.6766666666666666,
+        "std_mrr": 0.14087031072743628
+      },
+      {
+        "dense_weight": 0.2,
+        "bm25_weight": 0.8,
+        "mean_hit_rate": 0.86,
+        "std_hit_rate": 0.1356465996625054,
+        "mean_mrr": 0.6986666666666665,
+        "std_mrr": 0.1375758376718496
+      },
+      {
+        "dense_weight": 0.4,
+        "bm25_weight": 0.6,
+        "mean_hit_rate": 0.8800000000000001,
+        "std_hit_rate": 0.09797958971132716,
+        "mean_mrr": 0.7113333333333334,
+        "std_mrr": 0.12406718609957534
+      },
+      {
+        "dense_weight": 0.5,
+        "bm25_weight": 0.5,
+        "mean_hit_rate": 0.9199999999999999,
+        "std_hit_rate": 0.07483314773547882,
+        "mean_mrr": 0.7220000000000001,
+        "std_mrr": 0.13210013037254897
+      },
+      {
+        "dense_weight": 0.6,
+        "bm25_weight": 0.4,
+        "mean_hit_rate": 0.9199999999999999,
+        "std_hit_rate": 0.0979795897113271,
+        "mean_mrr": 0.7066666666666667,
+        "std_mrr": 0.12598500792642842
+      },
+      {
+        "dense_weight": 0.8,
+        "bm25_weight": 0.19999999999999996,
+        "mean_hit_rate": 0.9199999999999999,
+        "std_hit_rate": 0.0979795897113271,
+        "mean_mrr": 0.6513333333333333,
+        "std_mrr": 0.1440964183377844
+      },
+      {
+        "dense_weight": 1.0,
+        "bm25_weight": 0.0,
+        "mean_hit_rate": 0.7200000000000001,
+        "std_hit_rate": 0.09797958971132717,
+        "mean_mrr": 0.4883333333333334,
+        "std_mrr": 0.1308688911340914
+      }
+    ],
+    "nested_cross_validation": {
+      "folds": [
+        {
+          "fold": 1,
+          "selected_dense_weight": 0.5,
+          "selected_bm25_weight": 0.5,
+          "hit_rate": 0.8,
+          "mrr": 0.545,
+          "query_count": 10
+        },
+        {
+          "fold": 2,
+          "selected_dense_weight": 0.5,
+          "selected_bm25_weight": 0.5,
+          "hit_rate": 1.0,
+          "mrr": 0.95,
+          "query_count": 10
+        },
+        {
+          "fold": 3,
+          "selected_dense_weight": 0.5,
+          "selected_bm25_weight": 0.5,
+          "hit_rate": 0.9,
+          "mrr": 0.6666666666666666,
+          "query_count": 10
+        },
+        {
+          "fold": 4,
+          "selected_dense_weight": 0.5,
+          "selected_bm25_weight": 0.5,
+          "hit_rate": 0.9,
+          "mrr": 0.7033333333333334,
+          "query_count": 10
+        },
+        {
+          "fold": 5,
+          "selected_dense_weight": 0.5,
+          "selected_bm25_weight": 0.5,
+          "hit_rate": 1.0,
+          "mrr": 0.745,
+          "query_count": 10
+        }
+      ],
+      "mean_hit_rate": 0.9199999999999999,
+      "mean_mrr": 0.7220000000000001
+    }
+  },
+  "selected_weight_details": {
+    "query_count": 50,
+    "hit_rate": 0.92,
+    "mrr": 0.722,
+    "details": [
+      {
+        "id": "id_01",
+        "question": "¿Qué sectores se comparan en el gráfico de gasto intramuro en I+D de 2021?",
+        "source": "id_2021",
+        "hit": false,
+        "rank": null,
+        "reciprocal_rank": 0.0,
+        "correct_chunk_score": null,
+        "retrieved_chunk_ids": [
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:21_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:22_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:21_chunk_1",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:19_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:25_chunk_0"
+        ]
+      },
+      {
+        "id": "id_02",
+        "question": "¿Cuántas empresas e instituciones investigó la Encuesta de Inversión en I+D en 2021?",
+        "source": "id_2021",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 1.0,
+        "retrieved_chunk_ids": [
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:4_chunk_0",
+          "cb4bc39d61078647c1efd57a1810eecaa4f64df4a1b7923c0742feda141b03ed:html:article_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:6_chunk_1",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:6_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:7_chunk_0"
+        ]
+      },
+      {
+        "id": "id_03",
+        "question": "¿Cuántas empresas, sin incluir los demás sectores, fueron investigadas en la encuesta de I+D 2021?",
+        "source": "id_2021",
+        "hit": true,
+        "rank": 3,
+        "reciprocal_rank": 0.3333333333333333,
+        "correct_chunk_score": 0.8556851148605347,
+        "retrieved_chunk_ids": [
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:7_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:6_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:4_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:14_chunk_0",
+          "cb4bc39d61078647c1efd57a1810eecaa4f64df4a1b7923c0742feda141b03ed:html:article_chunk_0"
+        ]
+      },
+      {
+        "id": "id_04",
+        "question": "¿Cómo define el boletín la I+D intramuro y la I+D extramuro?",
+        "source": "id_2021",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.935634434223175,
+        "retrieved_chunk_ids": [
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:5_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:5_chunk_1",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:37_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:33_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:36_chunk_2"
+        ]
+      },
+      {
+        "id": "id_05",
+        "question": "¿Qué sector tuvo la mayor proporción de ejecución de I+D en períodos anteriores a 2021?",
+        "source": "id_2021",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 1.0,
+        "retrieved_chunk_ids": [
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:6_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:7_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:27_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:22_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:21_chunk_0"
+        ]
+      },
+      {
+        "id": "id_06",
+        "question": "¿Qué sector registró la mayor interrupción de actividades de I+D por COVID-19 en 2021?",
+        "source": "id_2021",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 1.0,
+        "retrieved_chunk_ids": [
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:7_chunk_0",
+          "aa32cbc5f07797f79786d221426aad1be6acfba0bbb77659fdf3e8854967336c:page:21_chunk_0",
+          "aa32cbc5f07797f79786d221426aad1be6acfba0bbb77659fdf3e8854967336c:page:21_chunk_1",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:21_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:14_chunk_0"
+        ]
+      },
+      {
+        "id": "id_07",
+        "question": "¿Qué porcentaje de las instituciones de educación superior interrumpió actividades de I+D por COVID-19 en 2021?",
+        "source": "id_2021",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 1.0,
+        "retrieved_chunk_ids": [
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:7_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:6_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:9_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:12_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:11_chunk_0"
+        ]
+      },
+      {
+        "id": "id_08",
+        "question": "¿Qué temática nueva del conocimiento fue la principal herramienta para I+D de las empresas en 2021?",
+        "source": "id_2021",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 1.0,
+        "retrieved_chunk_ids": [
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:7_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:8_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:26_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:26_chunk_1",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:17_chunk_0"
+        ]
+      },
+      {
+        "id": "id_09",
+        "question": "¿Cuál fue el principal obstáculo para que las empresas obtuvieran beneficios tributarios por inversiones en I+D?",
+        "source": "id_2021",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.9673687219619751,
+        "retrieved_chunk_ids": [
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:10_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:9_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:10_chunk_1",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:11_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:11_chunk_1"
+        ]
+      },
+      {
+        "id": "id_10",
+        "question": "¿Qué sector tuvo la mayor participación de investigadores en I+D intramuro en 2021?",
+        "source": "id_2021",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.9698383212089539,
+        "retrieved_chunk_ids": [
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:14_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:15_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:22_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:13_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:17_chunk_0"
+        ]
+      },
+      {
+        "id": "tich_01",
+        "question": "¿Desde qué año calcula el DANE los indicadores básicos de tenencia y uso de TIC en hogares?",
+        "source": "tic_hogares_2023",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 1.0,
+        "retrieved_chunk_ids": [
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:2_chunk_0",
+          "e999b7b795e396886e1bd1ef7943bba2fb0ffb560a4999a17d3be25561ad8137:page:3_chunk_2",
+          "a693c1d41d8a0b6d04990642a02967a8534e94e597f3f307e2e0cd117e98d21d:page:3_chunk_2",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:1_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:2_chunk_2"
+        ]
+      },
+      {
+        "id": "tich_02",
+        "question": "¿Cuál fue el tamaño de muestra de la ECV 2023 usada para los indicadores TIC?",
+        "source": "tic_hogares_2023",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.9617389440536499,
+        "retrieved_chunk_ids": [
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:2_chunk_2",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:42_chunk_0",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:41_chunk_0",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:3_chunk_0",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:34_chunk_0"
+        ]
+      },
+      {
+        "id": "tich_03",
+        "question": "¿Qué actualización se hizo a la pregunta sobre actividades de uso de Internet en la publicación TIC Hogares 2023?",
+        "source": "tic_hogares_2023",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.9277235865592957,
+        "retrieved_chunk_ids": [
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:3_chunk_1",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:2_chunk_2",
+          "d22e7fb0d5f1238cf90697443e667ebff8c136b450c0f879c81651bb98b526ec:html:article_chunk_0",
+          "81a33ae09526e34465eb8336ff3b129bf2cfb481aef1f68ee7421b2cd3832e72:html:article_chunk_1",
+          "529dfa73268ec9bf932a79481324907609f0873d99a53203a850c6c41c049b69:page:9_chunk_0"
+        ]
+      },
+      {
+        "id": "tich_04",
+        "question": "¿Qué porcentaje de hogares del total nacional tenía televisor a color, LCD, plasma o LED en 2023?",
+        "source": "tic_hogares_2023",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 1.0,
+        "retrieved_chunk_ids": [
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:5_chunk_0",
+          "529dfa73268ec9bf932a79481324907609f0873d99a53203a850c6c41c049b69:page:2_chunk_1",
+          "db3063493697afc24e57fc8084c6dc965e0dcc0be9d9c7cbf4f3d707b19112f5:page:15_chunk_0",
+          "881cb651f7c80c23781bec840b8aaca152005736fc3999542381beb8beda83d2:page:14_chunk_0",
+          "881cb651f7c80c23781bec840b8aaca152005736fc3999542381beb8beda83d2:page:16_chunk_0"
+        ]
+      },
+      {
+        "id": "tich_05",
+        "question": "¿Qué proporción de hogares del total nacional usaba televisión por cable, satelital o IPTV en 2023?",
+        "source": "tic_hogares_2023",
+        "hit": true,
+        "rank": 2,
+        "reciprocal_rank": 0.5,
+        "correct_chunk_score": 0.9394809007644653,
+        "retrieved_chunk_ids": [
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:5_chunk_1",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:5_chunk_0",
+          "529dfa73268ec9bf932a79481324907609f0873d99a53203a850c6c41c049b69:page:4_chunk_0",
+          "881cb651f7c80c23781bec840b8aaca152005736fc3999542381beb8beda83d2:page:32_chunk_0",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:4_chunk_0"
+        ]
+      },
+      {
+        "id": "tich_06",
+        "question": "¿Qué porcentaje de hogares tenía al menos una persona con teléfono celular en Colombia en 2023?",
+        "source": "tic_hogares_2023",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.951176643371582,
+        "retrieved_chunk_ids": [
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:7_chunk_0",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:9_chunk_0",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:24_chunk_0",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:25_chunk_0",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:8_chunk_1"
+        ]
+      },
+      {
+        "id": "tich_07",
+        "question": "¿Qué porcentaje de personas de 5 y más años poseía teléfono celular en 2023?",
+        "source": "tic_hogares_2023",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.9665324091911316,
+        "retrieved_chunk_ids": [
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:8_chunk_0",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:8_chunk_1",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:7_chunk_0",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:23_chunk_0",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:22_chunk_0"
+        ]
+      },
+      {
+        "id": "tich_08",
+        "question": "Entre las personas que tenían teléfono celular, ¿qué porcentaje poseía un smartphone en 2023?",
+        "source": "tic_hogares_2023",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.990321695804596,
+        "retrieved_chunk_ids": [
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:8_chunk_0",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:7_chunk_0",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:8_chunk_1",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:23_chunk_0",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:35_chunk_0"
+        ]
+      },
+      {
+        "id": "tice_01",
+        "question": "¿Cuántas empresas industriales manufactureras investigó el módulo TIC de la EAM en 2023?",
+        "source": "tic_empresas_2023",
+        "hit": true,
+        "rank": 3,
+        "reciprocal_rank": 0.3333333333333333,
+        "correct_chunk_score": 0.7528614401817322,
+        "retrieved_chunk_ids": [
+          "64210a7ac679f2f8dfbebe1b33cfcb752b10ed292795623824d0373054185369:html:article_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:46_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:3_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:37_chunk_1",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:47_chunk_0"
+        ]
+      },
+      {
+        "id": "tice_02",
+        "question": "¿Qué porcentaje de empresas industriales manufactureras usaba computador en 2023?",
+        "source": "tic_empresas_2023",
+        "hit": true,
+        "rank": 3,
+        "reciprocal_rank": 0.3333333333333333,
+        "correct_chunk_score": 0.8572221398353577,
+        "retrieved_chunk_ids": [
+          "64210a7ac679f2f8dfbebe1b33cfcb752b10ed292795623824d0373054185369:html:article_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:37_chunk_1",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:3_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:38_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:9_chunk_0"
+        ]
+      },
+      {
+        "id": "tice_03",
+        "question": "¿Qué porcentaje de empresas industriales suministró computadores de escritorio a su personal en 2023?",
+        "source": "tic_empresas_2023",
+        "hit": true,
+        "rank": 2,
+        "reciprocal_rank": 0.5,
+        "correct_chunk_score": 0.9434491395950317,
+        "retrieved_chunk_ids": [
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:12_chunk_1",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:4_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:4_chunk_1",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:13_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:24_chunk_0"
+        ]
+      },
+      {
+        "id": "tice_04",
+        "question": "¿Cuál fue la forma más frecuente de obtener aplicaciones informáticas entre las empresas industriales manufactureras en 2023?",
+        "source": "tic_empresas_2023",
+        "hit": true,
+        "rank": 5,
+        "reciprocal_rank": 0.2,
+        "correct_chunk_score": 0.9315711259841919,
+        "retrieved_chunk_ids": [
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:25_chunk_0",
+          "64210a7ac679f2f8dfbebe1b33cfcb752b10ed292795623824d0373054185369:html:article_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:37_chunk_1",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:8_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:5_chunk_0"
+        ]
+      },
+      {
+        "id": "tice_05",
+        "question": "¿Qué ancho de banda principal reportó la mayor proporción de empresas industriales que usaban internet en sus instalaciones?",
+        "source": "tic_empresas_2023",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 1.0,
+        "retrieved_chunk_ids": [
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:6_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:15_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:38_chunk_1",
+          "f1ef5b3f3aa97746157b71f49534071bc51e24c89f553cfccc862364916b49e0:page:18_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:6_chunk_1"
+        ]
+      },
+      {
+        "id": "tice_06",
+        "question": "¿Cuál fue el tipo de conexión a internet más usado por las empresas industriales manufactureras en 2023?",
+        "source": "tic_empresas_2023",
+        "hit": false,
+        "rank": null,
+        "reciprocal_rank": 0.0,
+        "correct_chunk_score": null,
+        "retrieved_chunk_ids": [
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:38_chunk_1",
+          "64210a7ac679f2f8dfbebe1b33cfcb752b10ed292795623824d0373054185369:html:article_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:37_chunk_1",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:27_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:8_chunk_0"
+        ]
+      },
+      {
+        "id": "tice_07",
+        "question": "¿Para qué actividad usó internet el 99,9% de las empresas industriales manufactureras en 2023?",
+        "source": "tic_empresas_2023",
+        "hit": true,
+        "rank": 2,
+        "reciprocal_rank": 0.5,
+        "correct_chunk_score": 0.9644705057144165,
+        "retrieved_chunk_ids": [
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:37_chunk_1",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:8_chunk_0",
+          "64210a7ac679f2f8dfbebe1b33cfcb752b10ed292795623824d0373054185369:html:article_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:39_chunk_1",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:3_chunk_0"
+        ]
+      },
+      {
+        "id": "tice_08",
+        "question": "¿Qué porcentaje de empresas industriales usó una plataforma electrónica para vender productos en 2023?",
+        "source": "tic_empresas_2023",
+        "hit": true,
+        "rank": 2,
+        "reciprocal_rank": 0.5,
+        "correct_chunk_score": 0.9570017457008362,
+        "retrieved_chunk_ids": [
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:17_chunk_1",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:9_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:33_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:8_chunk_1",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:17_chunk_2"
+        ]
+      },
+      {
+        "id": "entic_h_01",
+        "question": "¿Qué porcentaje de personas de 5 y más años usó herramientas de inteligencia artificial a través de Internet en 2024?",
+        "source": "entic_hogares_2024",
+        "hit": true,
+        "rank": 5,
+        "reciprocal_rank": 0.2,
+        "correct_chunk_score": 0.7623623609542847,
+        "retrieved_chunk_ids": [
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:26_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:24_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:25_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:27_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:1_chunk_0"
+        ]
+      },
+      {
+        "id": "entic_h_02",
+        "question": "¿Cuál es el propósito de la ENTIC Hogares según su introducción?",
+        "source": "entic_hogares_2024",
+        "hit": true,
+        "rank": 4,
+        "reciprocal_rank": 0.25,
+        "correct_chunk_score": 0.8722859621047974,
+        "retrieved_chunk_ids": [
+          "e999b7b795e396886e1bd1ef7943bba2fb0ffb560a4999a17d3be25561ad8137:page:3_chunk_0",
+          "a693c1d41d8a0b6d04990642a02967a8534e94e597f3f307e2e0cd117e98d21d:page:3_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:1_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:2_chunk_0",
+          "a693c1d41d8a0b6d04990642a02967a8534e94e597f3f307e2e0cd117e98d21d:page:1_chunk_0"
+        ]
+      },
+      {
+        "id": "entic_h_03",
+        "question": "¿Qué porcentaje de hogares tenía computador de escritorio, portátil o tableta en 2024?",
+        "source": "entic_hogares_2024",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.9955482482910156,
+        "retrieved_chunk_ids": [
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:4_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:4_chunk_1",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:11_chunk_0",
+          "e999b7b795e396886e1bd1ef7943bba2fb0ffb560a4999a17d3be25561ad8137:page:5_chunk_0",
+          "a693c1d41d8a0b6d04990642a02967a8534e94e597f3f307e2e0cd117e98d21d:page:5_chunk_0"
+        ]
+      },
+      {
+        "id": "entic_h_04",
+        "question": "¿Cuál fue el servicio de televisión más usado por los hogares colombianos en 2024?",
+        "source": "entic_hogares_2024",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.9808436632156372,
+        "retrieved_chunk_ids": [
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:5_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:6_chunk_0",
+          "529dfa73268ec9bf932a79481324907609f0873d99a53203a850c6c41c049b69:page:4_chunk_1",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:5_chunk_0",
+          "529dfa73268ec9bf932a79481324907609f0873d99a53203a850c6c41c049b69:page:4_chunk_0"
+        ]
+      },
+      {
+        "id": "entic_h_05",
+        "question": "¿Qué tipo de señal abierta de televisión fue la más usada en 2024?",
+        "source": "entic_hogares_2024",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 1.0,
+        "retrieved_chunk_ids": [
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:6_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:5_chunk_0",
+          "e999b7b795e396886e1bd1ef7943bba2fb0ffb560a4999a17d3be25561ad8137:page:7_chunk_0",
+          "a693c1d41d8a0b6d04990642a02967a8534e94e597f3f307e2e0cd117e98d21d:page:7_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:6_chunk_1"
+        ]
+      },
+      {
+        "id": "entic_h_06",
+        "question": "¿Qué porcentaje de hogares tenía conexión a Internet en Colombia en 2024?",
+        "source": "entic_hogares_2024",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.9943008422851562,
+        "retrieved_chunk_ids": [
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:7_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:8_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:9_chunk_0",
+          "529dfa73268ec9bf932a79481324907609f0873d99a53203a850c6c41c049b69:page:2_chunk_1",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:10_chunk_0"
+        ]
+      },
+      {
+        "id": "entic_h_07",
+        "question": "¿Qué departamento tuvo la mayor proporción de hogares con conexión a Internet en 2024?",
+        "source": "entic_hogares_2024",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 1.0,
+        "retrieved_chunk_ids": [
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:7_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:8_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:9_chunk_0",
+          "e999b7b795e396886e1bd1ef7943bba2fb0ffb560a4999a17d3be25561ad8137:page:7_chunk_1",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:10_chunk_0"
+        ]
+      },
+      {
+        "id": "entic_h_08",
+        "question": "¿Qué tipo de conexión predominó en los hogares de centros poblados y rural disperso con Internet en 2024?",
+        "source": "entic_hogares_2024",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.959492564201355,
+        "retrieved_chunk_ids": [
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:8_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:7_chunk_0",
+          "b586bd6941bdab724450f3afd38b1a6b4f2b19f0ceb41108c71ba9760249c53a:page:10_chunk_0",
+          "a693c1d41d8a0b6d04990642a02967a8534e94e597f3f307e2e0cd117e98d21d:page:9_chunk_0",
+          "e999b7b795e396886e1bd1ef7943bba2fb0ffb560a4999a17d3be25561ad8137:page:9_chunk_0"
+        ]
+      },
+      {
+        "id": "entic_e_01",
+        "question": "¿Para qué se diseñó la encuesta ENTIC Empresas?",
+        "source": "entic_empresas_2020",
+        "hit": true,
+        "rank": 5,
+        "reciprocal_rank": 0.2,
+        "correct_chunk_score": 0.7825566530227661,
+        "retrieved_chunk_ids": [
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:92_chunk_2",
+          "f1ef5b3f3aa97746157b71f49534071bc51e24c89f553cfccc862364916b49e0:page:124_chunk_0",
+          "bad02f4783e5beb7297de2e8c2284151f1ed366e1c31e55e1f108b3648239cf7:html:article_chunk_1",
+          "f1ef5b3f3aa97746157b71f49534071bc51e24c89f553cfccc862364916b49e0:page:2_chunk_0",
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:2_chunk_0"
+        ]
+      },
+      {
+        "id": "entic_e_02",
+        "question": "¿Cuántas empresas de comercio, servicios e industria investigó la ENTIC Empresas en 2020?",
+        "source": "entic_empresas_2020",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.9552149772644043,
+        "retrieved_chunk_ids": [
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:4_chunk_0",
+          "f1ef5b3f3aa97746157b71f49534071bc51e24c89f553cfccc862364916b49e0:page:3_chunk_0",
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:1_chunk_0",
+          "aa32cbc5f07797f79786d221426aad1be6acfba0bbb77659fdf3e8854967336c:page:4_chunk_0",
+          "7166a51cb492e653a3fbf14fe2da49e8143f5188e647d379597f4542755c0230:page:4_chunk_0"
+        ]
+      },
+      {
+        "id": "entic_e_03",
+        "question": "¿Qué porcentaje de empresas de comercio tenía un área interna encargada de coordinar las TIC en 2020?",
+        "source": "entic_empresas_2020",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 1.0,
+        "retrieved_chunk_ids": [
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:5_chunk_0",
+          "bad02f4783e5beb7297de2e8c2284151f1ed366e1c31e55e1f108b3648239cf7:html:article_chunk_0",
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:6_chunk_0",
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:5_chunk_1",
+          "f1ef5b3f3aa97746157b71f49534071bc51e24c89f553cfccc862364916b49e0:page:50_chunk_0"
+        ]
+      },
+      {
+        "id": "entic_e_04",
+        "question": "¿Cuál fue la principal razón de las empresas industriales para no contar con un área encargada de implementar TIC?",
+        "source": "entic_empresas_2020",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 1.0,
+        "retrieved_chunk_ids": [
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:6_chunk_0",
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:5_chunk_0",
+          "f1ef5b3f3aa97746157b71f49534071bc51e24c89f553cfccc862364916b49e0:page:50_chunk_0",
+          "bad02f4783e5beb7297de2e8c2284151f1ed366e1c31e55e1f108b3648239cf7:html:article_chunk_0",
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:5_chunk_1"
+        ]
+      },
+      {
+        "id": "entic_e_05",
+        "question": "¿Qué tipo de aplicación gratuita descargaron principalmente las empresas de todos los subsectores en 2020?",
+        "source": "entic_empresas_2020",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 1.0,
+        "retrieved_chunk_ids": [
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:11_chunk_0",
+          "f1ef5b3f3aa97746157b71f49534071bc51e24c89f553cfccc862364916b49e0:page:10_chunk_0",
+          "f1ef5b3f3aa97746157b71f49534071bc51e24c89f553cfccc862364916b49e0:page:11_chunk_0",
+          "f1ef5b3f3aa97746157b71f49534071bc51e24c89f553cfccc862364916b49e0:page:9_chunk_0",
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:6_chunk_1"
+        ]
+      },
+      {
+        "id": "entic_e_06",
+        "question": "¿Qué subsector tuvo la mayor proporción de personal ocupado que usó computador al menos una vez por semana en 2020?",
+        "source": "entic_empresas_2020",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 1.0,
+        "retrieved_chunk_ids": [
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:13_chunk_0",
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:74_chunk_0",
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:15_chunk_0",
+          "b15188c9054e3eab6d5742b1b501388bce7c628e596162bedc1098e07970d378:page:28_chunk_1",
+          "529dfa73268ec9bf932a79481324907609f0873d99a53203a850c6c41c049b69:page:5_chunk_0"
+        ]
+      },
+      {
+        "id": "entic_e_07",
+        "question": "¿Qué tipo de conexión a Internet predominó entre las empresas ENTIC Empresas en 2020?",
+        "source": "entic_empresas_2020",
+        "hit": true,
+        "rank": 4,
+        "reciprocal_rank": 0.25,
+        "correct_chunk_score": 0.8374192118644714,
+        "retrieved_chunk_ids": [
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:16_chunk_0",
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:76_chunk_0",
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:74_chunk_0",
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:14_chunk_0",
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:15_chunk_0"
+        ]
+      },
+      {
+        "id": "entic_e_08",
+        "question": "¿Qué tres subsectores tuvieron las mayores proporciones de conexión por cable, fibra óptica o canal dedicado en 2020?",
+        "source": "entic_empresas_2020",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.9761320948600769,
+        "retrieved_chunk_ids": [
+          "42a3b7bc952c47450a1716776ae486cd144fcbc794fb6492cc7a96d904894d3b:page:15_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:15_chunk_1",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:28_chunk_0",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:6_chunk_1",
+          "c56b90d95f9df89e5c46fa2a6589079e8378aa1442c4060595492cf642fe08ac:page:28_chunk_2"
+        ]
+      },
+      {
+        "id": "edit_01",
+        "question": "¿Cuál fue el período de referencia de la EDIT X de industria manufacturera?",
+        "source": "edit_manufacturera_2019_2020",
+        "hit": false,
+        "rank": null,
+        "reciprocal_rank": 0.0,
+        "correct_chunk_score": null,
+        "retrieved_chunk_ids": [
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:3_chunk_0",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:56_chunk_0",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:65_chunk_1",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:2_chunk_1",
+          "ced72a5a9df44277e7fd8aa41794879d353d0cee922272c92734b5dc8d2c1fbc:html:article_chunk_0"
+        ]
+      },
+      {
+        "id": "edit_02",
+        "question": "¿Qué indaga la EDIT X aplicada a empresas manufactureras?",
+        "source": "edit_manufacturera_2019_2020",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.8993183374404907,
+        "retrieved_chunk_ids": [
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:2_chunk_0",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:3_chunk_1",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:3_chunk_0",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:56_chunk_0",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:2_chunk_1"
+        ]
+      },
+      {
+        "id": "edit_03",
+        "question": "¿Cuántas empresas investigó la EDIT X y de cuántas obtuvo información?",
+        "source": "edit_manufacturera_2019_2020",
+        "hit": true,
+        "rank": 2,
+        "reciprocal_rank": 0.5,
+        "correct_chunk_score": 0.8519379496574402,
+        "retrieved_chunk_ids": [
+          "ced72a5a9df44277e7fd8aa41794879d353d0cee922272c92734b5dc8d2c1fbc:html:article_chunk_0",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:4_chunk_0",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:2_chunk_2",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:2_chunk_3",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:3_chunk_1"
+        ]
+      },
+      {
+        "id": "edit_04",
+        "question": "¿Qué proporción de las empresas de la EDIT X tenía 50 o menos personas ocupadas?",
+        "source": "edit_manufacturera_2019_2020",
+        "hit": false,
+        "rank": null,
+        "reciprocal_rank": 0.0,
+        "correct_chunk_score": null,
+        "retrieved_chunk_ids": [
+          "ced72a5a9df44277e7fd8aa41794879d353d0cee922272c92734b5dc8d2c1fbc:html:article_chunk_0",
+          "11a6fb6ff240dc32f794f1db6c6048667f2c0314a42ca87e5f869898525515dd:page:8_chunk_0",
+          "11a6fb6ff240dc32f794f1db6c6048667f2c0314a42ca87e5f869898525515dd:page:10_chunk_0",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:3_chunk_1",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:28_chunk_1"
+        ]
+      },
+      {
+        "id": "edit_05",
+        "question": "¿Cuántas empresas fueron innovadoras en sentido estricto según la EDIT X?",
+        "source": "edit_manufacturera_2019_2020",
+        "hit": true,
+        "rank": 1,
+        "reciprocal_rank": 1.0,
+        "correct_chunk_score": 0.9772404432296753,
+        "retrieved_chunk_ids": [
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:5_chunk_0",
+          "11a6fb6ff240dc32f794f1db6c6048667f2c0314a42ca87e5f869898525515dd:page:4_chunk_0",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:20_chunk_1",
+          "076b04f1485632af9baeaaaf48afba0ba89ca58fb79633040581c68b9f9ded41:page:9_chunk_0",
+          "076b04f1485632af9baeaaaf48afba0ba89ca58fb79633040581c68b9f9ded41:page:7_chunk_0"
+        ]
+      },
+      {
+        "id": "edit_06",
+        "question": "¿Qué actividad industrial tuvo la mayor proporción de empresas innovadoras en sentido estricto?",
+        "source": "edit_manufacturera_2019_2020",
+        "hit": true,
+        "rank": 2,
+        "reciprocal_rank": 0.5,
+        "correct_chunk_score": 0.9334197044372559,
+        "retrieved_chunk_ids": [
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:5_chunk_1",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:6_chunk_0",
+          "aa32cbc5f07797f79786d221426aad1be6acfba0bbb77659fdf3e8854967336c:page:5_chunk_0",
+          "ced72a5a9df44277e7fd8aa41794879d353d0cee922272c92734b5dc8d2c1fbc:html:article_chunk_1",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:5_chunk_0"
+        ]
+      },
+      {
+        "id": "edit_07",
+        "question": "¿Cuántas empresas realizaron innovaciones en productos nuevos durante 2019-2020?",
+        "source": "edit_manufacturera_2019_2020",
+        "hit": true,
+        "rank": 2,
+        "reciprocal_rank": 0.5,
+        "correct_chunk_score": 0.9725484848022461,
+        "retrieved_chunk_ids": [
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:7_chunk_1",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:7_chunk_0",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:8_chunk_0",
+          "11a6fb6ff240dc32f794f1db6c6048667f2c0314a42ca87e5f869898525515dd:page:5_chunk_0",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:9_chunk_0"
+        ]
+      },
+      {
+        "id": "edit_08",
+        "question": "¿Qué actividad tuvo la mayor proporción de empresas con innovaciones en procesos?",
+        "source": "edit_manufacturera_2019_2020",
+        "hit": true,
+        "rank": 2,
+        "reciprocal_rank": 0.5,
+        "correct_chunk_score": 0.9390875101089478,
+        "retrieved_chunk_ids": [
+          "aa32cbc5f07797f79786d221426aad1be6acfba0bbb77659fdf3e8854967336c:page:8_chunk_0",
+          "f7db5cbcd116dac07ea35ed5c1066cbd4b456c81caec38768f49d8cf658a063c:page:10_chunk_0",
+          "aa32cbc5f07797f79786d221426aad1be6acfba0bbb77659fdf3e8854967336c:page:11_chunk_0",
+          "aa32cbc5f07797f79786d221426aad1be6acfba0bbb77659fdf3e8854967336c:page:8_chunk_1",
+          "aa32cbc5f07797f79786d221426aad1be6acfba0bbb77659fdf3e8854967336c:page:6_chunk_1"
+        ]
+      }
+    ]
+  },
+  "selected_weight_diagnostics": {
+    "rank_distribution": {
+      "1": 30,
+      "2": 8,
+      "3": 3,
+      "4": 2,
+      "5": 3,
+      "not_retrieved": 4
+    },
+    "correct_chunk_score_summary": {
+      "count": 46,
+      "min": 0.7528614401817322,
+      "p25": 0.9339733868837357,
+      "median": 0.9669505655765533,
+      "mean": 0.9469953451467596,
+      "p75": 1.0,
+      "max": 1.0
+    },
+    "correct_chunk_score_bins": {
+      "[0.0, 0.2)": 0,
+      "[0.2, 0.4)": 0,
+      "[0.4, 0.6)": 0,
+      "[0.6, 0.8)": 3,
+      "[0.8, 1.0]": 43
+    }
+  }
+}

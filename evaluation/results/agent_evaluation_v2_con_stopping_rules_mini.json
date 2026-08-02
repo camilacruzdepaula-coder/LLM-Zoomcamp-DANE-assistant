@@ -1,0 +1,1067 @@
+[
+  {
+    "id": "search_01",
+    "category": "document_search",
+    "question": "¿Cómo define el boletín de I+D la investigación intramuro y extramuro?",
+    "expected_answer": "La I+D intramuro se realiza dentro de las instalaciones con personal propio; la extramuro se contrata a terceros para beneficio propio.",
+    "answer_agent": "Según el **Boletín Técnico de la Encuesta de Inversión en Investigación y Desarrollo (I+D) 2021**, la definición de investigación intramuro y extramuro es la siguiente:\n\n1. **Investigación Intramuro**: Se refiere a la realización de actividades de investigación y desarrollo dentro de las instalaciones de una empresa o institución, utilizando personal propio. Esta categoría incluye el gasto intramuro que se destina a la ejecución de los proyectos de I+D.\n\n2. **Investigación Extramuro**: Se define como la ejecución de actividades de I+D —tales como investigación básica, aplicada o desarrollo experimental— que son contratadas a terceros, es decir, se realizan fuera de las instalaciones de la empresa. Los resultados de esta investigación se destinan para uso y beneficio propio de la entidad que contrata el servicio. Este gasto se denomina gasto extramuro.\n\nEstas definiciones se adaptan del **Manual de Frascati de la OCDE**, el cual se utiliza como referencia para cuantificar y clasificar las actividades de I+D. \n\n**Fuentes**:\n- DANE, **Encuesta de Inversión en I+D 2021**.",
+    "tool_calls": [
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"definición investigación intramuro\"}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"definición investigación extramuro\"}"
+      }
+    ],
+    "agent_cost": 0.0010509,
+    "judge_cost": 0.0001917,
+    "total_cost": 0.0012426,
+    "expected_tools": [
+      "search_dane_knowledge_base"
+    ],
+    "actual_tools": [
+      "search_dane_knowledge_base",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": true,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente incluye los elementos esenciales que definen la investigación intramuro y extramuro, tal como se esperaba. Utiliza términos y explicaciones precisas, y menciona las fuentes relevantes, lo que refuerza su validez. Las definiciones son completas y concuerdan con la respuesta esperada.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada por el agente coincide con la secuencia esperada, ya que inicia correctamente con una búsqueda en la base de conocimiento del DANE y no presenta llamadas innecesarias o duplicadas. Esto muestra un uso adecuado de los recursos disponibles para obtener la información solicitada."
+    }
+  },
+  {
+    "id": "search_02",
+    "category": "document_search",
+    "question": "¿Qué mide la ENTIC Hogares?",
+    "expected_answer": "Mide el acceso y uso de TIC en hogares y personas, y sirve de insumo para políticas públicas.",
+    "answer_agent": "La **Encuesta de Tecnologías de la Información y las Comunicaciones en Hogares (ENTIC Hogares)** mide indicadores especializados sobre el acceso y uso de tecnologías de la información y la comunicación (TIC) en hogares y personas en Colombia. Su objetivo es monitorear las tendencias de la transformación digital que afecta todos los sectores de la sociedad.\n\nLos principales enfoques de la ENTIC Hogares incluyen:\n\n- Acceso a Internet en hogares.\n- Uso de herramientas TIC por parte de los individuos.\n- Calidad de los servicios de Internet.\n- Tendencias y evolución en el uso de TIC a lo largo del tiempo.\n\nPara más detalles, se pueden consultar las publicaciones específicas de la encuesta [aquí](https://www.dane.gov.co/files/investigaciones/tic/ENTIC_Hogares_2024.pdf).",
+    "tool_calls": [
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"ENTIC Hogares\"}"
+      }
+    ],
+    "agent_cost": 0.0007161,
+    "judge_cost": 0.00016845,
+    "total_cost": 0.00088455,
+    "expected_tools": [
+      "search_dane_knowledge_base"
+    ],
+    "actual_tools": [
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 1,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente proporciona una descripción clara y detallada de la ENTIC Hogares, incluyendo qué mide (acceso y uso de TIC en hogares y personas) y su relevancia en la formulación de políticas públicas. A pesar de que incluye información adicional, esta no contradice la respuesta esperada y complementa la comprensión del tema.",
+      "trajectory_reasoning": "La secuencia de llamada a la herramienta es adecuada. Se utilizó 'search_dane_knowledge_base' como la única herramienta, que es apropiada para buscar información sobre la ENTIC Hogares, siguiendo la secuencia esperada."
+    }
+  },
+  {
+    "id": "search_03",
+    "category": "document_search",
+    "question": "¿Qué indaga la EDIT X aplicada a empresas manufactureras?",
+    "expected_answer": "Indaga productos, actividades, recursos e instrumentos de apoyo asociados con desarrollo tecnológico e innovación.",
+    "answer_agent": "La Encuesta de Desarrollo e Innovación Tecnológica (EDIT) X aplicada a empresas manufactureras indaga sobre diversos aspectos relacionados con la innovación y la tecnología en este sector. Aquí están los puntos principales:\n\n1. **Cobertura**: Se investigaron un total de 7,762 empresas, de las cuales se obtuvo información de 6,799. La encuesta se enfoca en empresas que pertenecen a 55 subsectores de la industria manufacturera, clasificados según la Clasificación Industrial Internacional Uniforme (CIIU Rev. 4).\n\n2. **Tipo de Empresas**: Entre las empresas encuestadas, el 32.2% estaban involucradas en la confección de prendas de vestir, elaboración de productos alimenticios, fabricación de productos plásticos y actividades de impresión.\n\n3. **Indicadores de Innovación**: La encuesta recopila datos sobre inversión en actividades científicas, tecnológicas y de innovación (ACTI), financiamiento de estas actividades, relaciones con actores del Sistema Nacional de Ciencia, Tecnología e Innovación (SNCTI), así como evidencias de propiedad intelectual y certificaciones de calidad.\n\n4. **Metodología**: La EDIT X aplica una metodología de panel longitudinal para medir la evolución de la innovación, lo que significa que permite comparar resultados de distintos períodos de forma más precisa.\n\n5. **Variabilidad de Datos**: Se enfatiza que debido a la mejora continua en la cobertura y cambios en la actividad de las empresas, los datos de este período no son directamente comparables a los de la EDIT IX (2017-2018).\n\nPara más detalles, puedes consultar el [Boletín Técnico de la EDIT X](https://www.dane.gov.co).",
+    "tool_calls": [
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"EDIT X empresas manufactureras\"}"
+      }
+    ],
+    "agent_cost": 0.00086085,
+    "judge_cost": 0.00021915,
+    "total_cost": 0.00108,
+    "expected_tools": [
+      "search_dane_knowledge_base"
+    ],
+    "actual_tools": [
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 1,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "bad",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente incluye información detallada sobre la EDIT X y sus aspectos relacionados. Sin embargo, no aborda directamente lo que indaga la encuesta en términos de productos, actividades, recursos e instrumentos de apoyo asociados con desarrollo tecnológico e innovación, que es la respuesta esperada. En lugar de ello, se proporciona información adicional que no es necesaria para responder a la pregunta específica. Por lo tanto, aunque hay información valiosa, la respuesta no cumple con los requerimientos de la pregunta.",
+      "trajectory_reasoning": "La trayectoria seguida por el agente es adecuada ya que comienza con una búsqueda en la base de conocimiento de DANE, que es el primer paso correcto para encontrar información sobre la EDIT X. No se observan llamadas duplicadas ni innecesarias, por lo que la trayectoria se considera buena."
+    }
+  },
+  {
+    "id": "search_04",
+    "category": "document_search",
+    "question": "¿Qué actualización hizo el DANE a la pregunta sobre actividades de uso de Internet en TIC Hogares 2023?",
+    "expected_answer": "Amplió las opciones de respuesta, incluyendo llamadas o videollamadas, opiniones sobre productos y subir contenido propio.",
+    "answer_agent": "El DANE realizó una actualización en el diseño de la pregunta sobre actividades en el uso de Internet para el informe de TIC en Hogares 2023. Esta actualización se hizo para alinearse con los estándares internacionales de medición de indicadores de TIC establecidos por las Naciones Unidas. \n\nSe ampliaron las opciones de respuesta incluyendo actividades como:\n- Realización de llamadas o videollamadas.\n- Publicación o intercambio de opiniones sobre las características de un producto.\n- Subir contenido propio a un sitio web para ser compartido.\n\nEsta actualización se detalla en el boletín técnico correspondiente a los indicadores básicos TIC en hogares, publicado en 2023.",
+    "tool_calls": [
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"actualización actividades de uso de Internet TIC Hogares 2023\"}"
+      }
+    ],
+    "agent_cost": 0.0007176,
+    "judge_cost": 0.00016935,
+    "total_cost": 0.00088695,
+    "expected_tools": [
+      "search_dane_knowledge_base"
+    ],
+    "actual_tools": [
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 1,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente contiene la información esencial de la respuesta esperada, ya que menciona que se ampliaron las opciones de respuesta e incluye exactamente las actividades adicionales que se mencionan en la respuesta esperada. Además, el agente también señala el contexto de la actualización, lo que añade un valor informativo adicional.",
+      "trajectory_reasoning": "La trayectoria efectuada por el agente coincide con la secuencia de tools esperada, comenzando con una búsqueda específica en la base de conocimiento de DANE, que es apropiada para la pregunta formulada. No hay llamadas innecesarias ni duplicadas, por lo que se considera correcta."
+    }
+  },
+  {
+    "id": "search_05",
+    "category": "document_search",
+    "question": "¿Desde qué año calcula el DANE indicadores básicos de tenencia y uso de TIC en hogares?",
+    "expected_answer": "Desde 2007.",
+    "answer_agent": "El DANE calcula indicadores básicos de tenencia y uso de Tecnologías de la Información y las Comunicaciones (TIC) en hogares desde el año **2007**. Estos indicadores forman parte del programa internacional de medición de la Sociedad de la Información.",
+    "tool_calls": [
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"indicadores básicos de tenencia y uso de TIC en hogares\"}"
+      }
+    ],
+    "agent_cost": 0.0006579,
+    "judge_cost": 0.0001386,
+    "total_cost": 0.0007965,
+    "expected_tools": [
+      "search_dane_knowledge_base"
+    ],
+    "actual_tools": [
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 1,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente proporciona la información esencial del año desde el cual el DANE calcula indicadores de tenencia y uso de TIC en hogares, especificando correctamente el año 2007. Además, añade un contexto relevante sobre el programa de medición, lo que enriquece la respuesta sin desviarse del tema.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada es correcta, ya que se alineó con la herramienta esperada para la consulta sobre indicadores. No hay llamadas duplicadas ni innecesarias."
+    }
+  },
+  {
+    "id": "search_06",
+    "category": "document_search",
+    "question": "¿Qué aspectos de la transformación productiva busca medir la ENTIC Empresas?",
+    "expected_answer": "Investigación, transformación digital, preparación para inteligencia artificial y capacitación de talento humano frente a la 4RI.",
+    "answer_agent": "La Encuesta de Tecnologías de la Información y las Comunicaciones en Empresas (ENTIC Empresas) mide varios aspectos relacionados con la transformación productiva, enfocándose en:\n\n1. **Incorporación de Tecnologías**: La adopción de soluciones tecnológicas y la implementación de inteligencia artificial en los procesos productivos de las empresas.\n   \n2. **Impactos de la Digitalización**: Evalúa cómo estas tecnologías impactan diferentes áreas de la empresa, así como las razones por las cuales algunas empresas no adoptan estas tecnologías.\n\n3. **Generación de Valor**: Se investiga la generación de valor social y económico a través del uso estratégico de las tecnologías de la información y comunicaciones.\n\n4. **Preparación para la Cuarta Revolución Industrial (4RI)**: Busca crear condiciones habilitantes para que las empresas puedan adaptarse a los cambios económicos y sociales contemporáneos.\n\n5. **Capacitación de Talento Humano**: Mide la preparación y capacitación necesaria para que el talento humano pueda insertarse y aprovechar las oportunidades que brinda esta transformación digital.\n\nEsta encuesta es esencial para contribuir a la Política Nacional para la Transformación Digital e Inteligencia Artificial del gobierno colombiano.",
+    "tool_calls": [
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"aspectos de la transformación productiva en la ENTIC Empresas\"}"
+      }
+    ],
+    "agent_cost": 0.0007557,
+    "judge_cost": 0.0001815,
+    "total_cost": 0.0009372,
+    "expected_tools": [
+      "search_dane_knowledge_base"
+    ],
+    "actual_tools": [
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 1,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente incluye aspectos clave mencionados en la respuesta esperada, como la transformación digital, preparación para la inteligencia artificial y capacitación del talento humano frente a la 4RI. Además, proporciona información detallada sobre otros aspectos relevantes, lo cual enriquece la respuesta y está alineada con el objetivo de la encuesta.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada por el agente es adecuada, comenzando con una búsqueda en la base de conocimientos de DANE, que es la herramienta correcta para obtener la información solicitada. No se observan llamadas duplicadas ni innecesarias."
+    }
+  },
+  {
+    "id": "search_07",
+    "category": "document_search",
+    "question": "¿Cuál fue la principal razón por la que los hogares no tenían computador en 2024?",
+    "expected_answer": "El costo del computador fue la principal razón.",
+    "answer_agent": "La principal razón por la que los hogares no tenían computador en 2024 fue que consideraban que era \"demasiado costoso\". Esta razón se observó tanto a nivel nacional como en diversas localidades, con porcentajes del 52,3% a nivel nacional, 50,7% en cabeceras y 55,9% en centros poblados y rural disperso. \n\nAdemás, la segunda razón más mencionada fue la falta de interés, con un 37,5% a nivel nacional, 40,3% en cabeceras y 31,3% en el área rural. \n\nPara más detalles, puedes consultar el boletín técnico de la Encuesta de Tecnologías de la Información y las Comunicaciones en Hogares (ENTIC Hogares) 2024.",
+    "tool_calls": [
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"razones hogares no tenían computador 2024\"}"
+      }
+    ],
+    "agent_cost": 0.0007368,
+    "judge_cost": 0.0001752,
+    "total_cost": 0.000912,
+    "expected_tools": [
+      "search_dane_knowledge_base"
+    ],
+    "actual_tools": [
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 1,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente proporciona la información esencial relacionada con la pregunta, señalando correctamente que el costo del computador fue la principal razón por la que los hogares no tenían computador en 2024. También incluye cifras que respaldan esta afirmación, cumpliendo con los requisitos de precisión. Además, menciona una segunda razón, lo que enriquece la respuesta sin desviarse del enfoque principal.",
+      "trajectory_reasoning": "La secuencia de tools utilizada por el agente es adecuada, ya que solo realizó la llamada a la herramienta 'search_dane_knowledge_base', que es pertinente para obtener la información solicitada. No se observan duplicados ni llamadas innecesarias."
+    }
+  },
+  {
+    "id": "search_08",
+    "category": "document_search",
+    "question": "¿Qué sector tuvo la mayor proporción de investigadores en I+D intramuro en 2021?",
+    "expected_answer": "Las instituciones privadas sin ánimo de lucro, con 91,0%.",
+    "answer_agent": "En 2021, el sector que tuvo la mayor proporción de investigadores en I+D intramuro fue el de **Privadas sin ánimo de lucro**, con una participación de **91,0%**. Esta cifra indica que este sector tuvo la mayor participación de investigadores en comparación con otros sectores, que también mostraron un aumento en la participación del personal en I+D intramuro.\n\n### Fuente\n- **Publicación**: Boletín Técnico Encuesta de Inversión en I+D\n- **Página**: 14\n- **Año**: 2021\n\nSi necesitas más información o detalles específicos, házmelo saber.",
+    "tool_calls": [
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"proporción de investigadores en I+D intramuro\",\"row_label\":\"sector\",\"year\":\"2021\",\"unit\":\"porcentaje\",\"limit\":5}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"proporción de investigadores en I+D intramuro 2021\"}"
+      }
+    ],
+    "agent_cost": 0.0009585,
+    "judge_cost": 0.00017355,
+    "total_cost": 0.0011320500000000001,
+    "expected_tools": [
+      "search_dane_knowledge_base"
+    ],
+    "actual_tools": [
+      "lookup_official_statistic",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": false,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "bad",
+      "answer_reasoning": "La respuesta del agente proporciona la información esencial sobre el sector con la mayor proporción de investigadores en I+D intramuro en 2021, incluyendo la cifra correcta del 91,0%. Además, menciona la fuente de la información, lo cual es adecuado y valioso.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada comienza con 'lookup_official_statistic', lo cual es apropiado, pero luego también realiza un 'search_dane_knowledge_base'. Dado que ya se obtuvo la cifra precisa, la segunda llamada es innecesaria. Esto justifica la puntuación baja en la trayectoria."
+    }
+  },
+  {
+    "id": "lookup_01",
+    "category": "statistic_direct",
+    "question": "¿Cuántas empresas e instituciones interrumpieron actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "453 empresas e instituciones.",
+    "answer_agent": "En 2021, el boletín técnico de la **Encuesta de Inversión en I+D** del DANE revela que la interrupción de actividades de I+D a causa del COVID-19 fue reportada en varios sectores. Aquí están algunos detalles destacados:\n\n- **Proporción de interrupción**:\n  - **Instituciones de educación superior**: 30.1%\n  - **Privadas sin ánimo de lucro**: 11.1%\n  - **Gobierno**: 7.5%\n  - **Empresas**: 7.5%\n\nLa fuente de esta información es el DANE, específicamente de la Encuesta de Inversión en I+D 2021. Para más detalles, puedes consultar el boletín técnico en el sitio web del DANE.",
+    "tool_calls": [
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"interrupción actividades I+D COVID-19\",\"row_label\":\"empresas e instituciones\",\"year\":\"2021\",\"unit\":\"unidades\",\"limit\":1}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"interrupción actividades I+D COVID-19 2021\"}"
+      }
+    ],
+    "agent_cost": 0.00068415,
+    "judge_cost": 0.0002019,
+    "total_cost": 0.00088605,
+    "expected_tools": [
+      "lookup_official_statistic"
+    ],
+    "actual_tools": [
+      "lookup_official_statistic",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "bad",
+      "trajectory_score": "bad",
+      "answer_reasoning": "La respuesta del agente incluye información valiosa sobre la proporción de interrupciones de I+D en diferentes sectores, pero no proporciona la cifra exacta de 453 empresas e instituciones, que era la respuesta esperada. Falta la cifra clave que responde directamente a la pregunta planteada.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada fue incorrecta. Aunque se usó 'lookup_official_statistic', se esperaba obtener una cifra clara, y luego se debería haber procedido a un análisis más detallado si la información no se había encontrado. La llamada a 'search_dane_knowledge_base' debería haber sido un recurso de respaldo, pero se utilizó en lugar de buscar primero la cifra exacta. Además, no se observan duplicaciones, pero la organización no fue efectiva en obtener la respuesta esperada."
+    }
+  },
+  {
+    "id": "lookup_02",
+    "category": "statistic_direct",
+    "question": "¿Qué proporción del total de empresas interrumpió actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "7,45%.",
+    "answer_agent": "En 2021, la proporción de empresas que interrumpieron actividades de I+D a causa del COVID-19 fue del **7,5%**. Este porcentaje corresponde al total nacional de empresas encuestadas, según la \"Encuesta de Inversión en Investigación y Desarrollo\".\n\n- **Fuente**: DANE, Encuesta de Inversión en I+D, Boletín Técnico, Página 7.\n- **Año**: 2021\n- **Porcentaje**: 7,5%",
+    "tool_calls": [
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"interrupción actividades I+D COVID-19\",\"row_label\":\"total empresas\",\"year\":\"2021\",\"unit\":\"porcentaje\",\"limit\":1}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"proporción total empresas interrumpió actividades I+D COVID-19 2021\"}"
+      }
+    ],
+    "agent_cost": 0.0007914,
+    "judge_cost": 0.0001665,
+    "total_cost": 0.0009579,
+    "expected_tools": [
+      "lookup_official_statistic"
+    ],
+    "actual_tools": [
+      "lookup_official_statistic",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente proporciona la cifra correcta de 7,5% en relación a las empresas que interrumpieron actividades de I+D debido a COVID-19 en 2021, y menciona la fuente de la información, que es relevante y precisa.",
+      "trajectory_reasoning": "La secuencia de tools utilizada inicia correctamente con `lookup_official_statistic`, lo que es adecuado para obtener la cifra estadística. La segunda llamada, aunque es un fallback, está justificada para buscar información adicional, por lo que no se penaliza. No se observaron llamadas duplicadas o innecesarias."
+    }
+  },
+  {
+    "id": "lookup_03",
+    "category": "statistic_direct",
+    "question": "¿Cuántas empresas de industria interrumpieron actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "246 empresas.",
+    "answer_agent": "En 2021, **246** empresas de industria interrumpieron sus actividades de I+D debido a la COVID-19. \n\n- **Unidad:** Unidades\n- **Fuente:** [Anexo de la Encuesta de Inversión en Investigación y Desarrollo 2021](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx)\n- **Página de referencia:** [DANE - Encuesta de inversión en I+D](https://www.dane.gov.co/index.php/estadisticas-por-tema/tecnologia-e-innovacion/encuesta-de-inversion-en-investigacion-y-desarrollo-i-d)\n- **Cuadro:** Empresas e instituciones que interrumpieron sus actividades de I+D a causa de la pandemia por COVID-19.",
+    "tool_calls": [
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"interrupción de actividades de I+D por COVID-19\",\"row_label\":\"empresas de industria\",\"year\":\"2021\",\"unit\":\"unidades\",\"limit\":1}"
+      }
+    ],
+    "agent_cost": 0.00047475,
+    "judge_cost": 0.00016995,
+    "total_cost": 0.0006447,
+    "expected_tools": [
+      "lookup_official_statistic"
+    ],
+    "actual_tools": [
+      "lookup_official_statistic"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 1,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente contiene la cifra correcta de 246 empresas que interrumpieron sus actividades de I+D por COVID-19 en 2021, que es la información esencial solicitada. Además, el agente proporciona la fuente y página de referencia, lo cual respalda la calidad de la respuesta.",
+      "trajectory_reasoning": "La trayectoria de herramientas utilizada coincide con la secuencia esperada, comenzando con 'lookup_official_statistic', que es adecuada para obtener datos estadísticos. No hubo llamadas duplicadas o innecesarias, lo que contribuye a una buena calificación en la trayectoria."
+    }
+  },
+  {
+    "id": "lookup_04",
+    "category": "statistic_direct",
+    "question": "¿Cuántas empresas de comercio interrumpieron actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "40 empresas.",
+    "answer_agent": "En 2021, un total de **40 empresas de comercio** interrumpieron sus actividades de I+D debido a la pandemia por COVID-19. \n\n- **Unidad**: Unidades\n- **Año**: 2021\n- **Fuente**: [Documento DANE - Encuesta de inversión en I+D](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx)\n- **Página de fuente**: [DANE Tecnología e Innovación](https://www.dane.gov.co/index.php/estadisticas-por-tema/tecnologia-e-innovacion/encuesta-de-inversion-en-investigacion-y-desarrollo-i-d)",
+    "tool_calls": [
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"empresas de comercio interrumpieron actividades de I+D por COVID-19\",\"row_label\":\"Comercio\",\"year\":\"2021\",\"unit\":\"unidades\",\"limit\":1}"
+      }
+    ],
+    "agent_cost": 0.0004644,
+    "judge_cost": 0.00016185,
+    "total_cost": 0.0006262500000000001,
+    "expected_tools": [
+      "lookup_official_statistic"
+    ],
+    "actual_tools": [
+      "lookup_official_statistic"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 1,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente es correcta, ya que proporciona la cifra exacta de 40 empresas, la unidad pertinente y la referencia clara a la fuente de la información. Esta información coincide con la respuesta esperada y no contiene datos inventados ni errores.",
+      "trajectory_reasoning": "La trayectoria de las llamadas es adecuada. Se inicia correctamente con la llamada a 'lookup_official_statistic', que era el primer paso necesario para obtener la cifra de empresas que interrumpieron actividades de I+D, y no se observan llamadas duplicadas o innecesarias."
+    }
+  },
+  {
+    "id": "lookup_05",
+    "category": "statistic_direct",
+    "question": "¿Cuántas empresas de servicios interrumpieron actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "167 empresas.",
+    "answer_agent": "En 2021, **12 empresas de servicios** interrumpieron actividades de I+D debido a COVID-19.\n\n- **Unidad**: Unidades\n- **Fuente**: [Anexo de la Encuesta de Inversión en I+D 2021](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx)\n- **Página fuente**: [DANE - Tecnología e Innovación](https://www.dane.gov.co/index.php/estadisticas-por-tema/tecnologia-e-innovacion/encuesta-de-inversion-en-investigacion-y-desarrollo-i-d)\n- **Cuadro y hoja**: M1.1",
+    "tool_calls": [
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"interrupción de actividades de I+D\",\"row_label\":\"empresas de servicios\",\"year\":\"2021\",\"unit\":\"unidades\",\"limit\":1}"
+      }
+    ],
+    "agent_cost": 0.0004608,
+    "judge_cost": 0.0001479,
+    "total_cost": 0.0006087,
+    "expected_tools": [
+      "lookup_official_statistic"
+    ],
+    "actual_tools": [
+      "lookup_official_statistic"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 1,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "bad",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente menciona que 12 empresas interrumpieron actividades de I+D debido a COVID-19 en 2021, lo cual no coincide con la respuesta esperada de 167 empresas. Por lo tanto, contiene información incorrecta.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada comienza correctamente con 'lookup_official_statistic', que es apropiada para esta consulta. No hay llamadas innecesarias o duplicadas."
+    }
+  },
+  {
+    "id": "lookup_06",
+    "category": "statistic_direct",
+    "question": "¿Cuántas instituciones de educación superior interrumpieron actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "83 instituciones.",
+    "answer_agent": "En 2021, un total de **83 instituciones de educación superior** interrumpieron sus actividades de investigación y desarrollo (I+D) a causa de la pandemia por COVID-19. Esta cifra se encuentra en el contexto de la **Encuesta de Inversión en Investigación y Desarrollo I+D 2021**.\n\n### Detalles:\n- **Valor:** 83 instituciones\n- **Unidad:** Unidades\n- **Año:** 2021\n- **Fuente:** [DANE - Anexo I+D 2021](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx)\n\nSi necesitas más información o detalles adicionales, házmelo saber.",
+    "tool_calls": [
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"interrupción actividades I+D por COVID-19\",\"row_label\":\"instituciones de educación superior\",\"year\":\"2021\",\"unit\":\"unidades\",\"limit\":5}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"instituciones de educación superior interrupción actividades I+D COVID-19 2021\"}"
+      }
+    ],
+    "agent_cost": 0.0012486,
+    "judge_cost": 0.0001785,
+    "total_cost": 0.0014271000000000002,
+    "expected_tools": [
+      "lookup_official_statistic"
+    ],
+    "actual_tools": [
+      "lookup_official_statistic",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente proporciona la cifra exacta de 83 instituciones, que coincide con la respuesta esperada. Además, incluye contexto relevante sobre la fuente de la información, lo que refuerza la validez de la respuesta.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada por el agente comienza correctamente con 'lookup_official_statistic', que es apropiada para obtener la cifra de instituciones mencionadas. El uso posterior de 'search_dane_knowledge_base' como un fallback es justificado, dado que no hubo indicación de que la cifra no se pudiera obtener. No se registran llamadas duplicadas, lo cual es positivo."
+    }
+  },
+  {
+    "id": "lookup_07",
+    "category": "statistic_direct",
+    "question": "¿Cuántas entidades privadas sin ánimo de lucro interrumpieron actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "7 entidades.",
+    "answer_agent": "No encontré cifras específicas sobre cuántas entidades privadas sin ánimo de lucro interrumpieron actividades de I+D debido al COVID-19 en 2021. Sin embargo, el boletín técnico de la **Encuesta de Inversión en I+D 2021** menciona que este sector tuvo una proporción notable de interrupciones, aunque no proporciona un número exacto.\n\n### Información Adicional:\n- **Publicación**: Boletín Técnico, Encuesta de Inversión en I+D 2021.\n- **Ubicación**: Página 7.\n- **Contenido Relevante**: Las entidades privadas sin ánimo de lucro fueron uno de los sectores impactados, junto con instituciones de educación superior y otros.\n\nPara más detalles, puedes consultar el boletín completo en el sitio oficial del DANE. Si necesitas información más específica, puedo ayudar a buscar otros datos.",
+    "tool_calls": [
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"entidades privadas sin ánimo de lucro interrumpieron actividades de I+D\",\"row_label\":\"Total de entidades privadas sin ánimo de lucro\",\"year\":\"2021\",\"unit\":\"unidades\",\"limit\":1}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"entidades privadas sin ánimo de lucro interrumpieron actividades de I+D COVID-19 2021\"}"
+      }
+    ],
+    "agent_cost": 0.00100545,
+    "judge_cost": 0.00023625,
+    "total_cost": 0.0012416999999999999,
+    "expected_tools": [
+      "lookup_official_statistic"
+    ],
+    "actual_tools": [
+      "lookup_official_statistic",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "bad",
+      "trajectory_score": "bad",
+      "answer_reasoning": "La respuesta del agente no proporciona la cifra exacta de \"7 entidades\" como se esperaba. Si bien menciona que no se encontraron cifras específicas y hace referencia a un boletín técnico, falta la cifra clave que se requería en la pregunta. Además, la información adicional sobre la proporción de interrupciones no sustituye la cifra esperada. La respuesta ideal debe incluir la cifra exacta o la declaración que se carece de evidencia suficiente para responder la pregunta. Por lo tanto, en base a la información proporcionada, la respuesta no cumple con el criterio esperado.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada no fue la más adecuada desde el inicio. Se esperaría que comenzara con una búsqueda de estadísticas oficiales a través del herramienta `lookup_official_statistic`, que está presente, pero sobre cosas menos específicas y posteriormente cambia a `search_dane_knowledge_base`. Esto indica que la búsqueda no fue bien dirigida desde el inicio y se utilizaron herramientas que no apoyan eficazmente la respuesta. Por lo tanto, la trayectoria no fue correcta."
+    }
+  },
+  {
+    "id": "lookup_08",
+    "category": "statistic_direct",
+    "question": "¿Cuántas entidades de gobierno interrumpieron actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "3 entidades.",
+    "answer_agent": "En 2021, **3 entidades de gobierno** interrumpieron sus actividades de I+D debido a la pandemia por COVID-19. Esta cifra se encuentra en el \"Cuadro 1.4\" de la Encuesta de Inversión en Investigación y Desarrollo (I+D) del DANE.\n\n- **Valor:** 3 unidades\n- **Año:** 2021\n- **Fuente:** [Boletín Técnico - Encuesta de Inversión en I+D 2021](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx)\n- **Hoja:** M1.4\n- **URL fuente:** [DANE - Encuesta de I+D](https://www.dane.gov.co/index.php/estadisticas-por-tema/tecnologia-e-innovacion/encuesta-de-inversion-en-investigacion-y-desarrollo-i-d)",
+    "tool_calls": [
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"entidades de gobierno interrumpieron actividades de I+D por COVID-19\",\"row_label\":\"Total\",\"year\":\"2021\",\"unit\":\"unidades\",\"limit\":5}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"entidades de gobierno interrumpieron actividades de I+D por COVID-19 2021\"}"
+      }
+    ],
+    "agent_cost": 0.0012519,
+    "judge_cost": 0.00017445,
+    "total_cost": 0.00142635,
+    "expected_tools": [
+      "lookup_official_statistic"
+    ],
+    "actual_tools": [
+      "lookup_official_statistic",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "bad",
+      "answer_reasoning": "La respuesta del agente proporciona correctamente la cifra de 3 entidades, que coincide con la respuesta esperada, y brinda contexto adicional (fuente, hoja y valoración). Contiene la información esencial requerida y no inventa datos.",
+      "trajectory_reasoning": "La secuencia de herramientas realizada por el agente no es óptima. Después de hacer la búsqueda de la estadística oficial, que está bien, se realizó una llamada innecesaria a la base de conocimiento, cuando la información clave ya se había obtenido. Esto contradice la secuencia de herramientas esperada."
+    }
+  },
+  {
+    "id": "lookup_09",
+    "category": "statistic_direct",
+    "question": "¿Qué proporción de entidades privadas sin ánimo de lucro interrumpió actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "11,11%.",
+    "answer_agent": "No tengo evidencia suficiente todavía para responder la pregunta.",
+    "tool_calls": [
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"proporción de entidades privadas sin ánimo de lucro que interrumpió actividades de I+D por COVID-19\",\"row_label\":\"entidades privadas sin ánimo de lucro\",\"year\":\"2021\",\"unit\":\"porcentaje\",\"limit\":5}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"proporción de entidades privadas sin ánimo de lucro que interrumpió actividades de I+D por COVID-19 en 2021\"}"
+      }
+    ],
+    "agent_cost": 0.00090645,
+    "judge_cost": 0.00013305,
+    "total_cost": 0.0010395,
+    "expected_tools": [
+      "lookup_official_statistic"
+    ],
+    "actual_tools": [
+      "lookup_official_statistic",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "bad",
+      "trajectory_score": "bad",
+      "answer_reasoning": "La respuesta del agente no aborda la pregunta y se limita a indicar la falta de evidencia. No proporciona información sobre la proporción esperada, que es del 11,11%.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada no fue adecuada para proporcionar la respuesta, ya que además de la llamada inicial, se realizó una búsqueda de conocimiento que no era necesaria y no justificó adecuadamente su uso."
+    }
+  },
+  {
+    "id": "lookup_10",
+    "category": "statistic_direct",
+    "question": "¿Qué proporción de instituciones de educación superior interrumpió actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "30,07%.",
+    "answer_agent": "En 2021, la proporción de instituciones de educación superior que interrumpieron sus actividades de I+D debido a la pandemia por COVID-19 fue del **30.07%**.\n\n### Detalles:\n- **Valor:** 30.07%\n- **Unidad:** porcentaje\n- **Año:** 2021\n- **Cuadro:** Encuesta de Inversión en Investigación y Desarrollo I+D 2021\n- **Hoja:** M1.4\n- **Fuente:** [DANE Encuesta de Inversión en I+D 2021](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx)",
+    "tool_calls": [
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"proporción instituciones de educación superior actividades I+D interrupido COVID-19\",\"row_label\":\"Instituciones de educación superior\",\"year\":\"2021\",\"unit\":\"porcentaje\",\"limit\":5}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"proporción instituciones de educación superior actividades de I+D interrumpido COVID-19 2021\"}"
+      }
+    ],
+    "agent_cost": 0.00149325,
+    "judge_cost": 0.00016995,
+    "total_cost": 0.0016632,
+    "expected_tools": [
+      "lookup_official_statistic"
+    ],
+    "actual_tools": [
+      "lookup_official_statistic",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente es correcta y proporciona la información exacta requerida, incluyendo la cifra específica del 30,07%, así como detalles adicionales que refuerzan la precisión de la respuesta. No inventa información y se atiene a la evidencia disponible.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada es adecuada y sigue la lógica esperada. Comienza con la búsqueda de estadísticas oficiales, lo que es apropiado para obtener cifras exactas, y luego utiliza un fallback justificable a la base de conocimientos de DANE, sin realizar llamadas innecesarias."
+    }
+  },
+  {
+    "id": "lookup_11",
+    "category": "statistic_direct",
+    "question": "¿Qué proporción de empresas de industria interrumpió actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "10,16%.",
+    "answer_agent": "En 2021, el **37%** de las empresas de la industria interrumpió actividades de I+D debido a COVID-19.\n\n- **Unidad:** porcentaje\n- **Año:** 2021\n- **Cuadro:** Cuadro 1.1 Empresas e instituciones según grado de realización de actividades de I+D durante el año 2021\n- **Fuente:** [DANE - Encuesta de Inversión en Investigación y Desarrollo I+D 2021](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx)",
+    "tool_calls": [
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"interrupción de actividades de I+D\",\"row_label\":\"empresas de industria\",\"year\":\"2021\",\"unit\":\"porcentaje\",\"limit\":1}"
+      }
+    ],
+    "agent_cost": 0.00044775,
+    "judge_cost": 0.0001641,
+    "total_cost": 0.00061185,
+    "expected_tools": [
+      "lookup_official_statistic"
+    ],
+    "actual_tools": [
+      "lookup_official_statistic"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 1,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "bad",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente indica un porcentaje (37%) que no corresponde con la respuesta esperada (10,16%). Esto implica que el agente proporcionó información incorrecta, lo que afecta negativamente la calidad de su respuesta. Además, la respuesta no menciona referencias o contexto que validen esta cifra errónea.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada comenzó correctamente con 'lookup_official_statistic', lo cual es apropiado para buscar datos estadísticos. No se identifican llamadas duplicadas o innecesarias en la secuencia, cumpliendo así con la trayectoria esperada."
+    }
+  },
+  {
+    "id": "compare_01",
+    "category": "comparison_direct",
+    "question": "¿Cuántas más empresas de industria que de comercio interrumpieron actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "La industria registró 206 interrupciones más que el comercio.",
+    "answer_agent": "En 2021, interrumpieron sus actividades de I+D:\n\n- **Empresas de industria**: 246 interrupciones.  \n  - [Fuente](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx) (Cuadro 1.4, fila 9)\n\n- **Empresas de comercio**: 40 interrupciones.  \n  - [Fuente](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx) (Cuadro 1.4, fila 12)\n\nPor lo tanto, **246 - 40 = 206** más empresas de industria interrumpieron actividades de I+D por COVID-19 en comparación con las de comercio.",
+    "tool_calls": [
+      {
+        "name": "compare_official_statistics",
+        "arguments": "{\"metric_query\":\"interrupciones de actividades de I+D por COVID-19\",\"row_label_a\":\"industria\",\"row_label_b\":\"comercio\",\"year\":\"2021\",\"unit\":\"unidades\"}"
+      },
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"interrumpieron actividades de I+D por COVID-19\",\"row_label\":\"Empresas de industria\",\"year\":\"2021\",\"unit\":\"unidades\",\"limit\":1}"
+      },
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"interrumpieron actividades de I+D por COVID-19\",\"row_label\":\"Empresas de comercio\",\"year\":\"2021\",\"unit\":\"unidades\",\"limit\":1}"
+      }
+    ],
+    "agent_cost": 0.00477915,
+    "judge_cost": 0.0001893,
+    "total_cost": 0.00496845,
+    "expected_tools": [
+      "compare_official_statistics"
+    ],
+    "actual_tools": [
+      "compare_official_statistics",
+      "lookup_official_statistic",
+      "lookup_official_statistic"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 3,
+    "duplicate_tool_calls": true,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "bad",
+      "answer_reasoning": "La respuesta del agente proporciona las cifras correctas de interrupciones de actividades de I+D para ambas industrias y realiza la comparación adecuada, explicando el cálculo que lleva a la conclusión correcta de que la industria tuvo 206 interrupciones más que el comercio.",
+      "trajectory_reasoning": "La secuencia de herramientas debería haber comenzado con `lookup_official_statistic` directamente para obtener las cifras antes de realizar la comparación, pero la llamada a `compare_official_statistics` de inmediato no es la esperada. Además, hay llamadas duplicadas para obtener estadísticas que deberían haber sido resueltas de una sola vez."
+    }
+  },
+  {
+    "id": "compare_02",
+    "category": "comparison_direct",
+    "question": "¿Cuántas más empresas de industria que de servicios interrumpieron actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "La industria registró 79 interrupciones más que los servicios.",
+    "answer_agent": "No tengo evidencia suficiente todavía para responder la pregunta.",
+    "tool_calls": [
+      {
+        "name": "compare_official_statistics",
+        "arguments": "{\"metric_query\":\"interrupción de actividades de I+D\",\"row_label_a\":\"sector industrial\",\"row_label_b\":\"sector servicios\",\"year\":\"2021\",\"unit\":\"unidades\"}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"interrupción de actividades de I+D por COVID-19 en 2021 en sectores industrial y servicios\"}"
+      }
+    ],
+    "agent_cost": 0.0005898,
+    "judge_cost": 0.00012945,
+    "total_cost": 0.0007192500000000001,
+    "expected_tools": [
+      "compare_official_statistics"
+    ],
+    "actual_tools": [
+      "compare_official_statistics",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "bad",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente no proporciona la información solicitada y no responde a la pregunta con datos relevantes. Se esperaba un dato específico sobre la cantidad de interrupciones, no una falta de evidencia.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada fue apropiada, comenzando con la comparación de estadísticas oficiales. Sin embargo, la llamada adicional a la base de conocimiento no era necesaria en este contexto."
+    }
+  },
+  {
+    "id": "compare_03",
+    "category": "comparison_direct",
+    "question": "¿Cuántas más instituciones de educación superior que entidades privadas sin ánimo de lucro interrumpieron actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "Las instituciones de educación superior registraron 76 interrupciones más.",
+    "answer_agent": "En el año 2021, **83 instituciones de educación superior** interrumpieron sus actividades de I+D debido a la pandemia por COVID-19.\n\nNo se encontraron cifras específicas sobre las entidades privadas sin ánimo de lucro que interrumpieron actividades de I+D en ese mismo año. No obstante, el boletín técnico del DANE indica que el sector de instituciones de educación superior tuvo la mayor proporción de interrupciones en comparación con las entidades privadas sin ánimo de lucro.\n\nPara obtener más información, puedes consultar el [boletín técnico](https://www.dane.gov.co/index.php/estadisticas-por-tema/tecnologia-e-innovacion/encuesta-de-inversion-en-investigacion-y-desarrollo-i-d).",
+    "tool_calls": [
+      {
+        "name": "compare_official_statistics",
+        "arguments": "{\"metric_query\":\"interrupción actividades I+D por COVID-19\",\"row_label_a\":\"instituciones de educación superior\",\"row_label_b\":\"entidades privadas sin ánimo de lucro\",\"year\":\"2021\",\"unit\":\"unidades\"}"
+      },
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"interrumpieron sus actividades de I+D a causa del COVID-19\",\"row_label\":\"Instituciones de educación superior\",\"year\":\"2021\",\"unit\":\"unidades\",\"limit\":1}"
+      },
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"interrumpieron sus actividades de I+D a causa del COVID-19\",\"row_label\":\"entidades privadas sin ánimo de lucro\",\"year\":\"2021\",\"unit\":\"unidades\",\"limit\":1}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"interrupción actividades I+D por COVID-19 en 2021 instituciones de educación superior y entidades privadas sin ánimo de lucro\"}"
+      }
+    ],
+    "agent_cost": 0.00449475,
+    "judge_cost": 0.0002445,
+    "total_cost": 0.0047392499999999995,
+    "expected_tools": [
+      "compare_official_statistics"
+    ],
+    "actual_tools": [
+      "compare_official_statistics",
+      "lookup_official_statistic",
+      "lookup_official_statistic",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 4,
+    "duplicate_tool_calls": true,
+    "judge": {
+      "answer_score": "bad",
+      "trajectory_score": "bad",
+      "answer_reasoning": "La respuesta del agente se aleja de la respuesta esperada, ya que menciona un número específico de instituciones de educación superior involucradas en interrupciones de I+D, pero no proporciona la cifra de entidades privadas sin ánimo de lucro ni calcula la diferencia esperada. Desde una perspectiva de contenido, no responde directamente a la pregunta al no ofrecer una comparación cuantitativa específica entre los dos grupos.",
+      "trajectory_reasoning": "La trayectoria de herramientas utilizada por el agente es incorrecta. Aunque comienza con una llamada a 'compare_official_statistics', que es adecuada para la comparación, no logra proporcionar los datos necesarios sobre las entidades privadas sin ánimo de lucro. Las llamadas a 'lookup_official_statistic' son redundantes, ya que esperábamos una llamada que diera el resultado directo de la comparación, y finalmente, la búsqueda en la base de conocimientos es un fallback que no se penaliza, pero no fue necesaria en este caso. El agente no utilizó la secuencia adecuada para obtener la información requerida."
+    }
+  },
+  {
+    "id": "compare_04",
+    "category": "comparison_direct",
+    "question": "¿Cuántas más instituciones de educación superior que entidades de gobierno interrumpieron actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "Las instituciones de educación superior registraron 80 interrupciones más.",
+    "answer_agent": "En 2021, **83 instituciones de educación superior** interrumpieron sus actividades de I+D a causa del COVID-19.\n\nNo se encontraron cifras específicas sobre cuántas entidades de gobierno interrumpieron sus actividades de I+D durante el mismo periodo.\n\nPor lo tanto, la diferencia no se puede calcular debido a la falta de datos sobre las entidades de gobierno. Sin embargo, se puede afirmar que al menos **83** instituciones de educación superior interrumpieron sus actividades, lo que indica que podrían haber más o menos entidades de gobierno en una situación similar.\n\n### Fuentes:\n- **Instituciones de educación superior**: \n  - **Valor**: 83 unidades\n  - **Año**: 2021\n  - **Cuadro**: [Cuadro 1.4 Empresas e instituciones que interrumpieron sus actividades de I+D.](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx)\n  \nPor lo tanto, se puede concluir que no tengo evidencia suficiente todavía para responder a la pregunta inicial sobre la comparación.",
+    "tool_calls": [
+      {
+        "name": "compare_official_statistics",
+        "arguments": "{\"metric_query\":\"interrupción de actividades de I+D por COVID-19\",\"row_label_a\":\"instituciones de educación superior\",\"row_label_b\":\"entidades de gobierno\",\"year\":\"2021\",\"unit\":\"unidades\"}"
+      },
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"interrumpieron sus actividades de I+D a causa del COVID-19\",\"row_label\":\"instituciones de educación superior\",\"year\":\"2021\",\"unit\":\"unidades\",\"limit\":1}"
+      },
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"interrumpieron sus actividades de I+D a causa del COVID-19\",\"row_label\":\"entidades de gobierno\",\"year\":\"2021\",\"unit\":\"unidades\",\"limit\":1}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"interrupción de actividades de I+D COVID-19 2021 entidades de gobierno\"}"
+      }
+    ],
+    "agent_cost": 0.0043656,
+    "judge_cost": 0.00023745,
+    "total_cost": 0.00460305,
+    "expected_tools": [
+      "compare_official_statistics"
+    ],
+    "actual_tools": [
+      "compare_official_statistics",
+      "lookup_official_statistic",
+      "lookup_official_statistic",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 4,
+    "duplicate_tool_calls": true,
+    "judge": {
+      "answer_score": "bad",
+      "trajectory_score": "bad",
+      "answer_reasoning": "La respuesta del agente no proporciona la cifra necesaria para calcular la diferencia solicitada. Aunque menciona que 83 instituciones de educación superior interrumpieron actividades, no se ofrece el contexto correcto para concluir que hay 80 interrupciones más. Además, el agente no logra abordar la pregunta principal que requiere una comparación directa de cifras entre las dos entidades, y no concluye con la respuesta específica a la consulta.",
+      "trajectory_reasoning": "La secuencia de tools tiene un inicio correcto con una llamada a `compare_official_statistics`, pero las llamadas posteriores a `lookup_official_statistic` y el `search_dane_knowledge_base` son ineficaces y no cumplen con el orden esperado, ya que deberían haber encontrado y comparado los datos directamente. También, se han realizado llamadas innecesarias y no se justificó adecuadamente el uso de ciertas herramientas."
+    }
+  },
+  {
+    "id": "compare_05",
+    "category": "comparison_direct",
+    "question": "¿Cuántas menos empresas de comercio que de servicios interrumpieron actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "El comercio registró 127 interrupciones menos que los servicios.",
+    "answer_agent": "En 2021, las cifras de empresas de comercio y servicios que interrumpieron actividades de I+D debido a COVID-19 son:\n\n- **Empresas de comercio:** 40 interrumpieron\n- **Empresas de servicios:** 167 interrumpieron\n\nLa diferencia en la cantidad de empresas de comercio que interrumpieron actividades de I+D en comparación con las de servicios es de **127 empresas menos**.\n\n### Fuentes:\n- **Comercio**: [Anexo ID 2021, Cuadro 1.4](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx), 2021, 40 unidades.\n- **Servicios**: [Anexo ID 2021, Cuadro 1.4](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx), 2021, 167 unidades.",
+    "tool_calls": [
+      {
+        "name": "compare_official_statistics",
+        "arguments": "{\"metric_query\":\"empresas que interrumpieron actividades de I+D por COVID-19\",\"row_label_a\":\"comercio\",\"row_label_b\":\"servicios\",\"year\":\"2021\",\"unit\":\"unidades\"}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"empresas que interrumpieron actividades de I+D por COVID-19\"}"
+      }
+    ],
+    "agent_cost": 0.00250905,
+    "judge_cost": 0.00019995,
+    "total_cost": 0.002709,
+    "expected_tools": [
+      "compare_official_statistics"
+    ],
+    "actual_tools": [
+      "compare_official_statistics",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente proporciona la cifra correcta de empresas de comercio (40) y de servicios (167) que interrumpieron actividades de I+D en 2021. Además, calcula correctamente la diferencia entre ambas cifras (127 empresas menos en comercio). También añade las fuentes de información, lo que refuerza la validez de la respuesta. Se contempla la información esencial y no hay invención de datos.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada empieza correctamente con 'compare_official_statistics', que es adecuada para la comparación de cifras. Luego, se usa 'search_dane_knowledge_base' como un respaldo que justifica cualquier investigación adicional, por lo que la trayectoria sigue la secuencia esperada sin penalizaciones."
+    }
+  },
+  {
+    "id": "compare_06",
+    "category": "comparison_direct",
+    "question": "¿Cuántas más empresas de industria que entidades privadas sin ánimo de lucro interrumpieron actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "La industria registró 239 interrupciones más.",
+    "answer_agent": "No encontré cifras específicas sobre cuántas más empresas de industria interrumpieron actividades de I+D en comparación con entidades privadas sin ánimo de lucro debido al COVID-19 en 2021.\n\nSin embargo, según un boletín técnico de DANE sobre la Encuesta de Inversión en I+D de 2021, se mencionó que las entidades privadas sin ánimo de lucro fueron uno de los sectores afectados, pero no se proporciona un número específico que permita hacer la comparación directa solicitada.\n\nPara más detalles, puedes consultar el boletín técnico en la página 7 de la publicación.",
+    "tool_calls": [
+      {
+        "name": "compare_official_statistics",
+        "arguments": "{\"metric_query\":\"interrupciones de actividades de I+D\",\"row_label_a\":\"empresa de industria\",\"row_label_b\":\"entidades privadas sin ánimo de lucro\",\"year\":\"2021\",\"unit\":\"unidades\"}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"interrupciones de actividades de I+D por COVID-19\"}"
+      }
+    ],
+    "agent_cost": 0.0005058,
+    "judge_cost": 0.0001899,
+    "total_cost": 0.0006957,
+    "expected_tools": [
+      "compare_official_statistics"
+    ],
+    "actual_tools": [
+      "compare_official_statistics",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "bad",
+      "trajectory_score": "bad",
+      "answer_reasoning": "La respuesta del agente no aporta la cifra crítica de 239 interrupciones que se esperaba. Aunque menciona la falta de información específica, no cumple con la requerimiento esencial de la pregunta al no ofrecer la comparación solicitada. Además, el agente no indica que no tiene evidencia suficiente. Por lo tanto, la respuesta es insatisfactoria.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada no siguió la lógica esperada para obtener cifras comparativas, ya que debería haber comenzado con un lookup_official_statistic para buscar datos específicos antes de realizar una comparación. La llamada a search_dane_knowledge_base es un fallback justificado, pero el flujo de herramientas no fue adecuado y hubo falta de cumplimiento con la secuencia estructurada inicialmente propuesta."
+    }
+  },
+  {
+    "id": "compare_07",
+    "category": "comparison_direct",
+    "question": "¿Cuántas más empresas del total que empresas de industria interrumpieron actividades de I+D por COVID-19 en 2021?",
+    "expected_answer": "El total de empresas registró 207 interrupciones más que la industria.",
+    "answer_agent": "No tengo evidencia suficiente todavía para responder la pregunta.",
+    "tool_calls": [
+      {
+        "name": "compare_official_statistics",
+        "arguments": "{\"metric_query\":\"interrumpieron actividades de I+D por COVID-19\",\"row_label_a\":\"total de empresas\",\"row_label_b\":\"empresas de industria\",\"year\":\"2021\",\"unit\":\"unidades\"}"
+      },
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"interrumpieron actividades de I+D por COVID-19\",\"row_label\":\"total de empresas\",\"year\":\"2021\",\"unit\":\"unidades\",\"limit\":5}"
+      },
+      {
+        "name": "lookup_official_statistic",
+        "arguments": "{\"query\":\"interrumpieron actividades de I+D por COVID-19\",\"row_label\":\"empresas de industria\",\"year\":\"2021\",\"unit\":\"unidades\",\"limit\":5}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"interrumpieron actividades de I+D por COVID-19 2021\"}"
+      }
+    ],
+    "agent_cost": 0.00437595,
+    "judge_cost": 0.0001827,
+    "total_cost": 0.00455865,
+    "expected_tools": [
+      "compare_official_statistics"
+    ],
+    "actual_tools": [
+      "compare_official_statistics",
+      "lookup_official_statistic",
+      "lookup_official_statistic",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 4,
+    "duplicate_tool_calls": true,
+    "judge": {
+      "answer_score": "bad",
+      "trajectory_score": "bad",
+      "answer_reasoning": "La respuesta del agente es incorrecta porque no aborda la pregunta específica. Aunque la respuesta dada sobre la falta de evidencia podría ser válida si no existiera información, la pregunta se puede responder con datos, por lo que el agente debió buscar cifras. La respuesta esperada sí tenía suficiente información para ser proporcionada.",
+      "trajectory_reasoning": "La trayectoria es inadecuada, ya que aunque se comenzó correctamente con 'compare_official_statistics', la serie de llamadas posteriores incluye duplicaciones y la última llamada a 'search_dane_knowledge_base' es innecesaria, dado que podría haber obtenido la información directamente sin ello. Se debieron evitar los pasos redundantes y centrarse en obtener las cifras directamente."
+    }
+  },
+  {
+    "id": "compare_08",
+    "category": "comparison_direct",
+    "question": "¿Cuántos puntos porcentuales más de interrupción registró la industria que el comercio por COVID-19 en 2021?",
+    "expected_answer": "La industria registró 7,12 puntos porcentuales más.",
+    "answer_agent": "En 2021, la interrupción de actividades debido al COVID-19 fue del **10.16%** para la industria y del **3.04%** para el comercio. \n\nPor lo tanto, la industria registró **7.12 puntos porcentuales más** de interrupción que el comercio.\n\n### Fuentes:\n- **Industria**: 10.16% [Encuesta de Inversión en I+D 2021](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx)\n- **Comercio**: 3.04% [Encuesta de Inversión en I+D 2021](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx)",
+    "tool_calls": [
+      {
+        "name": "compare_official_statistics",
+        "arguments": "{\"metric_query\":\"puntos de interrupción por COVID-19\",\"row_label_a\":\"industria\",\"row_label_b\":\"comercio\",\"year\":\"2021\",\"unit\":\"porcentaje\"}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"interrupción por COVID-19 en 2021\"}"
+      }
+    ],
+    "agent_cost": 0.0027255,
+    "judge_cost": 0.00018825,
+    "total_cost": 0.00291375,
+    "expected_tools": [
+      "compare_official_statistics"
+    ],
+    "actual_tools": [
+      "compare_official_statistics",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "good",
+      "answer_reasoning": "La respuesta del agente proporciona cifras correctas de interrupción para la industria y el comercio debido al COVID-19 en 2021, y realiza el cálculo correctamente, afirmando que la industria registró 7.12 puntos porcentuales más que el comercio, conforme a la respuesta esperada.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada por el agente comienza con 'compare_official_statistics', que es apropiado para obtener la comparación de cifras necesarias, y luego hace uso de 'search_dane_knowledge_base', lo que está justificado en este contexto pese a que no se requirió en la secuencia esperada. No hay llamadas duplicadas ni innecesarias."
+    }
+  },
+  {
+    "id": "compare_09",
+    "category": "comparison_direct",
+    "question": "¿Cuántos puntos porcentuales más de interrupción registró la industria que los servicios por COVID-19 en 2021?",
+    "expected_answer": "La industria registró 3,04 puntos porcentuales más.",
+    "answer_agent": "En 2021, la interrupción de actividades por COVID-19 fue la siguiente:\n\n- **Industria**: 10.16% \n- **Servicios**: 7.12% \n\nPor lo tanto, la industria registró **3.04 puntos porcentuales más de interrupción** que el sector de servicios.\n\n### Fuentes:\n- **Industria**: [Encuesta de Inversión en I+D 2021](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx)\n- **Servicios**: [Encuesta de Inversión en I+D 2021](https://www.dane.gov.co/files/investigaciones/boletines/tic/anexo_ID_2021.pdf.xlsx)",
+    "tool_calls": [
+      {
+        "name": "compare_official_statistics",
+        "arguments": "{\"metric_query\":\"interrupción por COVID-19\",\"row_label_a\":\"industria\",\"row_label_b\":\"servicios\",\"year\":\"2021\",\"unit\":\"porcentaje\"}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"interrupción por COVID-19 en la industria y servicios 2021\"}"
+      }
+    ],
+    "agent_cost": 0.00261255,
+    "judge_cost": 0.00017205,
+    "total_cost": 0.0027846,
+    "expected_tools": [
+      "compare_official_statistics"
+    ],
+    "actual_tools": [
+      "compare_official_statistics",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "good",
+      "trajectory_score": "bad",
+      "answer_reasoning": "La respuesta del agente proporciona correctamente los datos de interrupción para industria y servicios, y calcula con precisión la diferencia de 3.04 puntos porcentuales. Contiene todos los elementos relevantes de la respuesta esperada y no inventa información.",
+      "trajectory_reasoning": "La secuencia de herramientas es incorrecta porque debería haber comenzado con `lookup_official_statistic` para obtener las cifras exactas en lugar de `compare_official_statistics`. Aunque hubo un uso de `compare_official_statistics`, no se utilizó la herramienta inicial adecuada para las cifras."
+    }
+  },
+  {
+    "id": "compare_10",
+    "category": "comparison_direct",
+    "question": "¿Cuántos puntos porcentuales más de interrupción registraron las instituciones de educación superior que las entidades privadas sin ánimo de lucro en 2021?",
+    "expected_answer": "Las instituciones de educación superior registraron 18,96 puntos porcentuales más.",
+    "answer_agent": "No se encontraron cifras específicas y directas sobre el porcentaje de interrupción de actividades en instituciones de educación superior y en entidades privadas sin ánimo de lucro para el año 2021. Sin embargo, el Boletín Técnico de la Encuesta de Inversión en I+D 2021 indica que:\n\n- **Instituciones de educación superior**: Tuvieron una mayor proporción de interrupción de actividades de I+D a causa del COVID-19 en 2021.\n- **Entidades privadas sin ánimo de lucro**: También presentaron interrupciones, pero estas fueron menores en comparación con las instituciones de educación superior.\n\nPara obtener detalles específicos de los porcentajes, puedes consultar el Boletín Técnico completo [aquí](https://www.dane.gov.co).",
+    "tool_calls": [
+      {
+        "name": "compare_official_statistics",
+        "arguments": "{\"metric_query\":\"interrupción\",\"row_label_a\":\"instituciones de educación superior\",\"row_label_b\":\"entidades privadas sin ánimo de lucro\",\"year\":\"2021\",\"unit\":\"porcentaje\"}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"interrupción instituciones de educación superior entidades privadas sin ánimo de lucro 2021\"}"
+      }
+    ],
+    "agent_cost": 0.0009819,
+    "judge_cost": 0.0002019,
+    "total_cost": 0.0011838,
+    "expected_tools": [
+      "compare_official_statistics"
+    ],
+    "actual_tools": [
+      "compare_official_statistics",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "bad",
+      "trajectory_score": "bad",
+      "answer_reasoning": "La respuesta del agente no proporciona la cifra específica solicitada sobre los puntos porcentuales de interrupción. En cambio, ofrece información general que no responde a la pregunta principal. Además, cita un boletín técnico pero no presenta datos concretos, lo que no satisface el requerimiento de la respuesta esperada que exige cifras específicas.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada no es óptima. Aunque comenzó con `compare_official_statistics`, lo cual es correcto, la falta de resultados específicos indica que no se utilizó de manera efectiva. Sin embargo, el llamado a `search_dane_knowledge_base` como segundo paso es un intento de buscar información adicional; habría sido mejor utilizar herramientas complementarias o diferentes para obtener cifras concretas en lugar de saltar a una búsqueda no confirmada."
+    }
+  },
+  {
+    "id": "compare_11",
+    "category": "comparison_direct",
+    "question": "¿Cuántos puntos porcentuales más de interrupción registraron las instituciones de educación superior que el gobierno en 2021?",
+    "expected_answer": "Las instituciones de educación superior registraron 22,57 puntos porcentuales más.",
+    "answer_agent": "No encontré cifras específicas sobre los puntos porcentuales de interrupción registradas por las instituciones de educación superior y el gobierno en 2021. Sin embargo, en el **Boletín Técnico de la Encuesta de Inversión en I+D - 2021**, se menciona que las instituciones de educación superior fueron el sector con la mayor proporción de interrupción de actividades de I+D a causa del COVID-19.\n\nTe recomiendo consultar el documento completo para más detalles sobre las cifras de interrupción en este contexto:\n\n- **Fuente**: Boletín Técnico, Encuesta de Inversión en I+D 2021.\n- **Ubicación en el documento**: Página 7.\n\nSi necesitas más información o un análisis adicional, estaré encantado de ayudar.",
+    "tool_calls": [
+      {
+        "name": "compare_official_statistics",
+        "arguments": "{\"metric_query\":\"interrupción\",\"row_label_a\":\"instituciones de educación superior\",\"row_label_b\":\"gobierno\",\"year\":\"2021\",\"unit\":\"porcentaje\"}"
+      },
+      {
+        "name": "search_dane_knowledge_base",
+        "arguments": "{\"query\":\"interrupción instituciones de educación superior 2021\"}"
+      }
+    ],
+    "agent_cost": 0.0009753,
+    "judge_cost": 0.0001974,
+    "total_cost": 0.0011727,
+    "expected_tools": [
+      "compare_official_statistics"
+    ],
+    "actual_tools": [
+      "compare_official_statistics",
+      "search_dane_knowledge_base"
+    ],
+    "expected_sequence_used": true,
+    "tool_call_count": 2,
+    "duplicate_tool_calls": false,
+    "judge": {
+      "answer_score": "bad",
+      "trajectory_score": "bad",
+      "answer_reasoning": "La respuesta del agente no proporciona la cifra específica que se esperaba (22,57 puntos porcentuales) sobre la interrupción de instituciones de educación superior en comparación con el gobierno en 2021. En cambio, menciona que no encontró cifras específicas y simplemente sugiere consultar un documento, lo cual no cumple con la solicitud. Además, no expresa la falta de evidencia suficiente de manera correcta.",
+      "trajectory_reasoning": "La secuencia de herramientas utilizada por el agente no se alinea con la esperada. Aunque la primera llamada a 'compare_official_statistics' es adecuada para obtener cifras de comparación, la segunda llamada a 'search_dane_knowledge_base' no era necesaria y no apoya la respuesta directa a la pregunta. Esto indica una falta de enfoque en la consulta."
+    }
+  }
+]

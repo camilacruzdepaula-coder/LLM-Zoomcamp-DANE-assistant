@@ -1,0 +1,70 @@
+services:
+  data-init:
+    build:
+      context: .
+      target: data-init
+    environment:
+      DANE_DATA_DIR: /data
+      DATA_VERSION: ${DATA_VERSION:-v1}
+      HF_DATASET_REPOSITORY: ${HF_DATASET_REPOSITORY:-}
+      HF_DATASET_REVISION: ${HF_DATASET_REVISION:-main}
+    volumes:
+      - knowledge_data:/data
+    restart: "no"
+
+  app:
+    build:
+      context: .
+      target: app
+    depends_on:
+      data-init:
+        condition: service_completed_successfully
+    environment:
+      DANE_DATA_DIR: /data
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      STREAMLIT_BROWSER_GATHER_USAGE_STATS: "false"
+    ports:
+      - "${STREAMLIT_PORT:-8501}:8501"
+    volumes:
+      - knowledge_data:/data:ro
+      - observability_data:/app/app_data
+
+  ingestion:
+    profiles: ["ingestion"]
+    build:
+      context: .
+      target: ingestion
+    environment:
+      PREFECT_HOME: /workspace/.prefect
+    volumes:
+      - ./build:/workspace/build
+      - ./artifacts:/workspace/artifacts
+    command:
+      - --version
+      - ${DATA_VERSION:-v1}
+      - --build-root
+      - /workspace/build/dane-ingestion
+      - --artifact-dir
+      - /workspace/artifacts
+      - --overwrite
+
+  publisher:
+    profiles: ["publish"]
+    build:
+      context: .
+      target: publisher
+    environment:
+      DATA_VERSION: ${DATA_VERSION:-v1}
+      HF_DATASET_REPOSITORY: ${HF_DATASET_REPOSITORY:-}
+      HF_TOKEN: ${HF_TOKEN:-}
+    volumes:
+      - ./artifacts:/artifacts:ro
+    command:
+      - --artifact-dir
+      - /artifacts
+      - --version
+      - ${DATA_VERSION:-v1}
+
+volumes:
+  knowledge_data:
+  observability_data:

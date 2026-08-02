@@ -1,0 +1,11 @@
+.env
+.git
+.prefect
+.venv
+__pycache__
+*.py[cod]
+app_data
+artifacts
+build
+data
+evaluation/results
