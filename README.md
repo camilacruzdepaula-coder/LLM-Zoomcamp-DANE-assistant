@@ -107,8 +107,23 @@ cost, tool usage, user feedback, and a periodic LLM relevance assessment. Its
    git clone <repository-url>
    ```
 
+   ![Clone the repository](Screenshots/git-clone.png)
+
 2. Create `.env` in this folder, next to `docker-compose.yml`, and set
    `OPENAI_API_KEY`, `HF_DATASET_REPOSITORY`.
+
+   ![Create the `.env` file](Screenshots/env-example.png)
+
+   **Note on `HF_DATASET_REPOSITORY`:** this value is **not** needed to run the
+   application — only the `OPENAI_API_KEY` is required to launch it. A Hugging
+   Face token is only necessary if you intend to use the *ingestion pipeline*
+   to rebuild the knowledge base. In that case you must create a token with
+   **Write** permissions:
+
+   1. Go to [huggingface.co](https://huggingface.co) and sign in.
+   2. Open **Settings → Access Tokens** (User Access Tokens).
+   3. Create a new token and give it the **Write** permission scope.
+   4. Save it as `HF_TOKEN` in `.env`, alongside `HF_DATASET_REPOSITORY`.
 
 3. Start the application.
 
@@ -116,7 +131,13 @@ cost, tool usage, user feedback, and a periodic LLM relevance assessment. Its
    docker compose up --build
    ```
 
-   Docker downloads and validates the data artifact automatically.
+   Docker downloads and validates the data artifact automatically. The first
+   build can take **20 minutes or more**, depending on your connection, because
+   Docker downloads the heavy Hugging Face embedding models along with all the
+   dependencies.
+
+   ![Open Docker](Screenshots/open-docker.png)
+   ![Build the containers](Screenshots/docker-compose.png)
 
 4. Open `http://localhost:8501`.
 
@@ -125,6 +146,21 @@ Examples of well-scoped questions:
 - `¿Qué porcentaje de hogares tenía conexión a Internet en Colombia en 2024?`
 - `¿Cuál fue el principal obstáculo para obtener beneficios tributarios por inversiones en I+D?`
 - `¿Cuántas más empresas de industria que de comercio interrumpieron actividades de I+D por COVID-19 en 2021?`
+
+### Use the agent
+
+Start a conversation by typing one of the example questions above. The
+assistant retrieves official DANE evidence before answering, and it can tell
+you whether the answer came from the documentary knowledge base or the tabular
+statistics.
+
+![Open the app at http://localhost:8501](Screenshots/link-localhost.png)
+![Example conversation with the assistant](Screenshots/chat-example.png)
+![Monitoring dashboard](Screenshots/monitoring-dash.png)
+
+The *Monitoring Dashboard* records latency, token and cost usage, tool
+activity, user feedback, and the LLM relevance assessment for each
+interaction.
 
 ### Build the artifact on the source machine
 
