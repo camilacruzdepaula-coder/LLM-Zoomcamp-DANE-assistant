@@ -144,7 +144,7 @@ cost, tool usage, user feedback, and a periodic LLM relevance assessment. Its
 Examples of well-scoped questions:
 
 - `¿Qué porcentaje de hogares tenía conexión a Internet en Colombia en 2024?`
-- `¿Cuál fue el principal obstáculo para obtener beneficios tributarios por inversiones en I+D?`
+- `¿Qué indicadores de innovación se midieron en Colombia en el 2023?`
 - `¿Cuántas más empresas de industria que de comercio interrumpieron actividades de I+D por COVID-19 en 2021?`
 
 ### Use the agent
@@ -156,11 +156,33 @@ statistics.
 
 ![Open the app at http://localhost:8501](Screenshots/link-localhost.png)
 ![Example conversation with the assistant](Screenshots/chat-example.png)
-![Monitoring dashboard](Screenshots/monitoring-dash.png)
+![Monitoring dashboard - overview](Screenshots/dashboard-monitoring-I.png)
+![Monitoring dashboard - details](Screenshots/dashboard-monitoring-II.png)
+![Monitoring dashboard - LLM assessment](Screenshots/dashboard-monitoring-III.png)
 
 The *Monitoring Dashboard* records latency, token and cost usage, tool
 activity, user feedback, and the LLM relevance assessment for each
 interaction.
+
+### Restart or stop the application
+
+If you need to restart the application without rebuilding the containers, use:
+
+```bash
+docker compose up -d
+```
+
+This starts the containers in detached mode (in the background). To stop them:
+
+```bash
+docker compose stop
+```
+
+To start them again without a full rebuild:
+
+```bash
+docker compose start
+```
 
 ### Build the artifact on the source machine
 
