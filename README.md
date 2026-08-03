@@ -105,11 +105,10 @@ cost, tool usage, user feedback, and a periodic LLM relevance assessment. Its
 
    ```bash
    git clone <repository-url>
-   cd llm-zoomcamp
    ```
 
 2. Create `.env` in this folder, next to `docker-compose.yml`, and set
-   `OPENAI_API_KEY`, `HF_DATASET_REPOSITORY`, and `DATA_VERSION`.
+   `OPENAI_API_KEY`, `HF_DATASET_REPOSITORY`.
 
 3. Start the application.
 
